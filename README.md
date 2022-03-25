@@ -30,7 +30,7 @@ BlieBlue is a static page website used as fulfilment to mid-term semester Web De
 2. Execute this command -> `git status`. To see your changed files.
 3. Add your changes to the staging area. `git add {your-new-branch-name-without-curly-braces}`. Or use `git add`. to add all changed files.
  > Staging area is an area that is used to store your files that will be committed.
-4. Execute this command ->  `git commit -m "your"`. 
+4. Execute this command ->  `git commit -m "your commit message here"`. 
 5. Publish and save your changes to the remote repository. Execute this command ->  `git push origin {your-current-branch-name}`.
 
 <br>
