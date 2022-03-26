@@ -33,6 +33,11 @@ section {
   margin: 1.5rem 0;
 }
 
+a * {
+  color: #FF5959;
+  display: inline;
+}
+
 @media screen and (max-width: 991.99px) {
 }
 
