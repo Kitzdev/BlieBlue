@@ -33,11 +33,30 @@ section {
   margin: 1.5rem 0;
 }
 
+#banner > div {
+  background-color: #676FA3;
+}
+
+#banner *{
+  color: #F4F7F8;
+} 
+
 a * {
   color: #FF5959;
   display: inline;
 }
 
-@media screen and (max-width: 991.99px) {
+#journey .journey-item {
+  background-color: #364063;
+  color: #F4F7F8;
 }
 
+.section-title {
+  text-decoration: underline #676FA3;
+}
+
+.section-title::before, .section-title::after {
+  content: "_";
+  color: #676FA3;
+  text-decoration: underline #676FA3;
+}
