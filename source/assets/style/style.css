@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+header {
+  font-family: 'Quicksand', 'sans-serif';    
+}
+
+#header_blieblue_text {
+  color: #3110FD;
+}
+
+.navbar-anchor > a {
+  color: black;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-anchor {
+    padding: 0;
+  }
+}
