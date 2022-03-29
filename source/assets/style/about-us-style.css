@@ -1,19 +1,52 @@
+:root {
+  --bs-breadcrumb-divider: '>';
+}
+
+#banner h1{
+  font-size: 3.5em;
+  letter-spacing: 0.5rem;
+}
+
+#get-to-know-us p{
+  margin: 0;
+}
+
+.section-title {
+  margin-bottom: 0.75rem;
+  border-bottom: 3px solid #676fa3;
+  padding-bottom: 5px;
+  width: fit-content;
+  display: inline-block;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  color: #676fa3;
+}
 
 .img-box {
   background-color: #eef2ff;
 }
 
-#product .card{
+#product .card {
   box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.1);
 }
 
-#product .img-box, #product .card, #product img {
+#product .img-box,
+#product .card,
+#product img {
   border-radius: 1rem;
 }
 
 #product img {
   height: 350px;
   object-fit: cover;
+}
+
+#product .transparent-bg-img {
+  height: 350px;
+  object-fit: scale-down;
 }
 
 #product {
@@ -25,39 +58,66 @@ section {
 }
 
 #team .card {
-  background-color: #EEF2FF;
+  background-color: #eef2ff;
   border-radius: 1rem;
-  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
-#team .col-md-4{
+#team .col-md-4 {
   margin: 1.5rem 0;
 }
 
 #banner > div {
-  background-color: #676FA3;
+  background-color: #676fa3;
 }
 
-#banner *{
-  color: #F4F7F8;
-} 
+#banner h1 {
+  color: #f4f7f8;
+}
 
-a * {
-  color: #FF5959;
+#banner a {
+  color: #f4f7f8;
+  text-decoration: none;
+}
+
+#banner a:hover {
+  color: #232632;
+}
+
+.breadcrumb-item.active {
+  color: #f4f7f8 !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #f4f7f8 !important;
+}
+
+.pg-link a * {
+  color: #ff5959;
   display: inline;
 }
 
 #journey .journey-item {
   background-color: #364063;
-  color: #F4F7F8;
+  color: #f4f7f8;
 }
 
-.section-title {
-  text-decoration: underline #676FA3;
+#banner .row {
+  margin: 0;
 }
 
-.section-title::before, .section-title::after {
-  content: "_";
-  color: #676FA3;
-  text-decoration: underline #676FA3;
+#service img {
+  width: 100%;
+  object-fit: scale-down;
+}
+
+@media screen and (max-width: 768px) {
+  .desc-start {
+    order: 2;
+  }
+
+  #service img {
+    width: 80%;
+    margin: 3% 0;
+  }
 }

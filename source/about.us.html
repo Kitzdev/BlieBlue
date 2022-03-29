@@ -15,12 +15,13 @@
   </head>
   <body>
     <header>
-      <!-- nav link -->
+      <!-- Header loaded from assets/parts/header.html -->
+      <script src="assets/parts/header.js"></script>
 
       <!-- banner -->
-      <section id="banner">
+      <section id="banner" class="m-0">
           <div class="row text-center py-5">
-            <h1 class="diplay-3">ABOUT US</h1>
+            <h1>ABOUT US</h1>
 
             <nav aria-label="col breadcrumb">
               <ol class="breadcrumb justify-content-center">
@@ -32,14 +33,14 @@
         </section>
     </header>
     <main>
-      <!-- body container, used as content padding -->
-      <div class="container-fluid main-box p-5 bg-light justify-content-center">
+      <!-- body container used as content padding -->
+      <div class="container-fluid m-0 main-box p-5 bg-light justify-content-center">
 
         <!-- get to know us -->
-        <section id="intro">
+        <section id="get-to-know-us">
           <div class="row justify-content-center text-center py-5">
             <div class="col-md-8">
-              <h1 class="display-5 section-title">Get to Know Us</h1>
+              <h1 class="section-title text-center">Get to Know Us</h1>
               <p>BlieBlue PetShop provides pet care items since 2018</p>
               <p>We passionate to provide the best product for your pets</p>
               <p>We commit to develop our products continuously and provide best quality to our product</p>
@@ -51,7 +52,7 @@
         <section id="product">
           <div class="row justify-content-center text-center py-5">
             <div class="col-md-8">
-              <h1 class="display-5 section-title">Our Products</h1>
+              <h1 class="section-title text-center">Our Products</h1>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores illo ut corrupti earum porro. Repellat quod voluptates dolorum doloribus animi eligendi ipsam facere ullam, vero, placeat assumenda possimus consequuntur
                 quibusdam.
@@ -64,7 +65,7 @@
             <div class="col-md-4">
               <div class="card my-4 mx-2">
                 <div class="img-box">
-                  <img src="assets/about-us-images/whiskas.png" class="card-img-top" alt="..." />
+                  <img src="assets/about-us-images/whiskas.png" class="card-img-top transparent-bg-img" alt="..." />
                 </div>
                 <div class="card-body mx-2 mb-2">
                   <h5 class="card-title">Card title</h5>
@@ -98,7 +99,7 @@
         </section>
         
         <!-- link to product page -->
-        <div class="d-flex align-items-end flex-column">
+        <div class="d-flex align-items-end flex-column pg-link">
           <a href="/source/products.html" class="text-decoration-none">
             <p>Check out our Products</p>
             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FF5959"><g><rect fill="none" height="24" width="24"/></g><g><g><polygon points="6.41,6 5,7.41 9.58,12 5,16.59 6.41,18 12.41,12"/><polygon points="13,6 11.59,7.41 16.17,12 11.59,16.59 13,18 19,12"/></g></g></svg>
@@ -107,11 +108,17 @@
 
         <!-- our services -->
         <section id="service">
-          <h1 class="display-5 text-center section-title">Our Services</h1>
+          <div class="row justify-content-center text-center py-5">
+            <div class="col-md-8">
+              <h1 class="section-title text-center">Our Services</h1>
+            </div>
+          </div>
+          </div>
+          
 
         <!-- services -->
           <div class="row service-item justify-content-start">
-            <div class="col-md-6">
+            <div class="col-md-6 text-center">
               <img src="assets/about-us-images/pet-taking-bath.png" alt="Pet Taking Bath" />
             </div>
             <div class="col-md-4 align-self-center">
@@ -120,16 +127,16 @@
             </div>
           </div>
           <div class="row service-item my-5 justify-content-end">
-            <div class="col-md-4 align-self-center">
+            <div class="col-md-4 align-self-center desc-start">
               <h3>Pet Training</h3>
               <p>We train your pet with various approaches with our proffesional pet trainer</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 text-center swappped-img">
               <img src="assets/about-us-images/dog-jumping.png" alt="Dog Jumping" />
             </div>
           </div>
           <div class="row service-item my-5 justify-content-start">
-            <div class="col-md-6">
+            <div class="col-md-6 text-center">
               <img src="assets/about-us-images/pet-hotel.jpg" alt="Pet Hotel" />
             </div>
             <div class="col-md-4 align-self-center">
@@ -141,7 +148,7 @@
         
 
         <!-- link to service page -->
-        <div class="d-flex align-items-end flex-column">
+        <div class="d-flex align-items-end flex-column pg-link">
           <a href="/source/services.html" class="text-decoration-none">
             <p>Check out our Services</p>
             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FF5959"><g><rect fill="none" height="24" width="24"/></g><g><g><polygon points="6.41,6 5,7.41 9.58,12 5,16.59 6.41,18 12.41,12"/><polygon points="13,6 11.59,7.41 16.17,12 11.59,16.59 13,18 19,12"/></g></g></svg>
@@ -150,7 +157,11 @@
 
         <!-- our journey -->
         <section id="journey">
-          <h1 class="display-5 text-center section-title">Our Journey</h1>
+          <div class="row justify-content-center text-center py-5">
+            <div class="col-md-8">
+              <h1 class="section-title text-center">Our Journey</h1>
+            </div>
+          </div>
           <div class="col-md-9 mx-auto">
             <div class="row my-5 justify-content-start">
               <h1>2018</h2>
@@ -193,7 +204,7 @@
         <section id="gallery">
           <div class="row justify-content-center text-center py-5">
             <div class="col-md-8">
-              <h1 class="display-5 section-title">Our Gallery</h1>
+              <h1 class="section-title text-center">Our Gallery</h1>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores illo ut corrupti earum porro. Repellat quod voluptates dolorum doloribus animi eligendi ipsam facere ullam, vero, placeat assumenda possimus consequuntur
                 quibusdam.
@@ -233,8 +244,10 @@
         <section id="team">
           <div class="row justify-content-center py-5 m-5">
             <div class="col-lg-4 align-self-center text-center">
-              <h1 class="displ yx5 section-title">Our Team</h1>
+              <h1 class="section-title text-center">Our Team</h1>
             </div>
+
+            <!-- team cards -->
             <div class="col-lg-4">
               <div class="card px-5 m-3 pt-3 pb-1">
                 <h4>Erick Julvan</h4>
@@ -268,10 +281,12 @@
           </div>
         </section>
         
-        
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <!-- Footer loaded from assets/parts/footer.html -->
+      <script src="assets/parts/footer.js"></script>
+    </footer>
 
     <script src="assets/library/bootstrap.min.js"></script>
     <script src="/source/assets/library/bootstrap.min.js"></script>
