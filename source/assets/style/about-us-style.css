@@ -7,10 +7,6 @@
   letter-spacing: 0.5rem;
 }
 
-#get-to-know-us p{
-  margin: 0;
-}
-
 .section-title {
   margin-bottom: 0.75rem;
   border-bottom: 3px solid #676fa3;
@@ -35,7 +31,9 @@
 
 #product .img-box,
 #product .card,
-#product img {
+#product img,
+#service .service-img,
+#service img {
   border-radius: 1rem;
 }
 
@@ -54,7 +52,7 @@
 }
 
 section {
-  margin: 5em 0;
+  margin: 7em 0;
 }
 
 #team .card {
@@ -107,8 +105,15 @@ section {
 }
 
 #service img {
+  width: 80%;
+  object-fit: cover;
+  background-color: #eef2ff;
+}
+
+#gallery img {
   width: 100%;
-  object-fit: scale-down;
+  height: 80vh;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
