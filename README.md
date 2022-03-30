@@ -35,5 +35,10 @@ BlieBlue is a static page website used as fulfilment to mid-term semester Web De
 > ### You can merge your branch to the main/master branch
 
 1. Make a pull request.
+2. Go to this repository.
+3. Select your branch.
+4. Click `Make a pull request` or equivalent.
 
-> Detail coming soon.
+
+## Tips
+1. Always execute `git pull origin main` in your branch before you start working.
