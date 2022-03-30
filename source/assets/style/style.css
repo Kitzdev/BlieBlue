@@ -14,8 +14,30 @@ header {
   font-weight: 800;
 }
 
-@media screen and (max-width: 768px) {
-  .navbar-anchor {
-    padding: 0;
-  }
+.menu-hamburger {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.menu-hamburger:after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  padding-left: 100%;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.5s
+}
+
+.menu-hamburger:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+@media screen and (max-width: 950px) {
+
+
 }
