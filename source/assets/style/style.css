@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.title-header {
+    background-color: #676FA3;
+    text-align: center;
+}
+
+.contact-us-heading {
+    color: #F4F7F8 !important;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.breadcrumb-item {
+    color: #F4F7F8 !important;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+ 
+.breadcrumb-item::before {
+    color: #f4f7f8 !important;
+}
+  
+/*text si home gamau putih -_-*/ 
+
+/* Descendant combinator */
+.breadcrumb-item a {
+    color: #F4F7F8 !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.home-breadcrumb:hover {
+    text-decoration: underline;
+}
+
+.tagline {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
