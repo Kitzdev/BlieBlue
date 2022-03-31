@@ -16,7 +16,7 @@ BlieBlue is a static page website used as fulfilment to mid-term semester Web De
 > You can use several ways to create a new branch.
 
 1. Open your terminal and make sure you are on the folder's project.  
-2. Execute this command -> `git checkout {your-new-branch-name-without-curly-braces}`. At this point, you are already on the new branch.
+2. Execute this command -> `git checkout -b {your-new-branch-name-without-curly-braces}`. At this point, you are already on the new branch.
 3. Push your new branch to the repository. Execute this command ->  `git push origin {your-new-branch-name-without-curly-braces}`.  
 
 ## What to do after you finish applying changes to this project?
@@ -35,5 +35,10 @@ BlieBlue is a static page website used as fulfilment to mid-term semester Web De
 > ### You can merge your branch to the main/master branch
 
 1. Make a pull request.
+2. Go to this repository.
+3. Select your branch.
+4. Click `Make a pull request` or equivalent.
 
-> Detail coming soon.
+
+## Tips
+1. Always execute `git pull origin main` in your branch before you start working.
