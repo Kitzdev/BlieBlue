@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato:wght@400;700&family=Quicksand:wght@700&family=Roboto+Slab&family=Roboto:wght@700&display=swap');
 
+.title-header {
+    background-color: #676FA3;
+    text-align: center;
+}
+
+.breadcrumb-item > a, .breadcrumb-item > strong, .breadcrumb-item::before, .contact-us-heading {
+    color: #F4F7F8 !important;
+}
+
 header {
     font-family: 'Quicksand', 'sans-serif';
 }
