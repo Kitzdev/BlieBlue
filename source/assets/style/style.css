@@ -8,6 +8,13 @@ header {
     color: #3110FD;
 }
 
+#banner {
+    background-color: #7070B8;
+    color: #FFFFFF;
+    height: auto;
+    margin: inherit;
+}
+
 .navbar-anchor > a {
     color: black;
     text-decoration: none;
