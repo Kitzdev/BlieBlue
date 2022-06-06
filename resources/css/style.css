@@ -2,7 +2,8 @@
 
 .title-header {
     background-color: #676FA3;
-    text-align: center;
+    padding: 2vh 0 1vh 0;
+    margin: 5vh 0 0 0;
 }
 
 .breadcrumb-item > a, .breadcrumb-item > strong, .breadcrumb-item::before, .contact-us-heading {
