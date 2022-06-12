@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Item;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // return view('parts.header');
     return view('landing_page');
 });
 
@@ -33,3 +34,5 @@ Route::get('/products', function () {
 Route::get('/service', function () {
     return view('services');
 });
+
+Route::get('/dashboard', [ProductController::class, 'index']);
