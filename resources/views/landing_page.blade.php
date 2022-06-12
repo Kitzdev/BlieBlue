@@ -16,7 +16,6 @@
     <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
 </head>
 <body>
-<!-- Header loaded from assets/parts/header.html -->
 <header>
     {{view('parts.header')}}
 </header>
