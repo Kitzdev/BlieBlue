@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blieblue - About Us</title>
-    <link href="../css/style.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="../css/about-us-style.css" />
 
-    <link rel="stylesheet" href="../../public/storage/library/bootstrap.min.css">
-    <link rel="stylesheet" href="../../public/storage/library/bootstrap.min.css" />
-
-    <script src="../../public/storage/library/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{asset('style.css')}}"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{asset('storage/library/bootstrap.min.css')}}"/>
+    <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
   </head>
   <body>
     <header>
       <!-- Header loaded from assets/parts/header.html -->
-      <script src="../../public/storage/parts/header.js"></script>
+      {{view('parts.header')}}
 
       <!-- banner -->
       <section id="banner" class="m-0">
@@ -25,7 +26,7 @@
 
             <nav aria-label="col breadcrumb">
               <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item"><a href="landing.page.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">About Us</li>
               </ol>
             </nav>
@@ -60,7 +61,7 @@
             <div class="col-md-4">
               <div class="card my-4 mx-2">
                 <div class="img-box">
-                  <img src="../../public/storage/about-us-images/whiskas.png" class="card-img-top transparent-bg-img" alt="..." />
+                  <img src="{{asset('storage/about-us-images/whiskas.png')}}" class="card-img-top transparent-bg-img" alt="..." />
                 </div>
                 <div class="card-body mx-2 mb-2">
                   <h5 class="card-title">Pet Food</h5>
@@ -71,7 +72,7 @@
             <div class="col-md-4">
               <div class="card my-4 mx-2">
                 <div class="img-box">
-                  <img src="../../public/storage/about-us-images/food-dispenser.jpg" class="card-img-top" alt="..." />
+                  <img src="{{asset('storage/about-us-images/food-dispenser.jpg')}}" class="card-img-top" alt="..." />
                 </div>
                 <div class="card-body mx-2 mb-2">
                   <h5 class="card-title">Support Tools</h5>
@@ -82,7 +83,7 @@
             <div class="col-md-4">
               <div class="card my-4 mx-2">
                 <div class="img-box">
-                  <img src="../../public/storage/about-us-images/cat-blanket.jpg" class="card-img-top" alt="..." />
+                  <img src="{{asset('storage/about-us-images/cat-blanket.jpg')}}" class="card-img-top" alt="..." />
                 </div>
                 <div class="card-body mx-2 mb-2">
                   <h5 class="card-title">Pet Accessories</h5>
@@ -95,7 +96,7 @@
 
         <!-- link to product page -->
         <div class="d-flex align-items-end flex-column pg-link">
-          <a href="products.html" class="text-decoration-none">
+          <a href="products.blade.php" class="text-decoration-none">
             <p>Check out our Products</p>
             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FF5959"><g><rect fill="none" height="24" width="24"/></g><g><g><polygon points="6.41,6 5,7.41 9.58,12 5,16.59 6.41,18 12.41,12"/><polygon points="13,6 11.59,7.41 16.17,12 11.59,16.59 13,18 19,12"/></g></g></svg>
           </a>
@@ -113,7 +114,7 @@
         <!-- services -->
           <div class="row service-item mx-0 justify-content-start">
             <div class="col-md-6 service-img text-center">
-              <img src="../../public/storage/about-us-images/pet-taking-bath.png" alt="Pet Taking Bath" />
+              <img src="{{asset('storage/about-us-images/pet-taking-bath.png')}}" alt="Pet Taking Bath" />
             </div>
             <div class="col-md-4 align-self-center">
               <h3>Grooming</h3>
@@ -126,12 +127,12 @@
               <p>We train your pet with various approaches with our proffesional pet trainer</p>
             </div>
             <div class="col-md-6 service-img text-center swappped-img">
-              <img src="../../public/storage/about-us-images/dog-jumping.png" alt="Dog Jumping" />
+              <img src="{{asset('storage/about-us-images/dog-jumping.png')}}" alt="Dog Jumping" />
             </div>
           </div>
           <div class="row service-item mt-5 mx-0 justify-content-start">
             <div class="col-md-6 service-img text-center">
-              <img src="../../public/storage/about-us-images/pet-hotel.jpg" alt="Pet Hotel" />
+              <img src="{{asset('storage/about-us-images/pet-hotel.jpg')}}" alt="Pet Hotel" />
             </div>
             <div class="col-md-4 align-self-center">
               <h3>Pet Hotel</h3>
@@ -143,7 +144,7 @@
 
         <!-- link to service page -->
         <div class="d-flex align-items-end flex-column pg-link">
-          <a href="services.html" class="text-decoration-none">
+          <a href="/services" class="text-decoration-none">
             <p>Check out our Services</p>
             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FF5959"><g><rect fill="none" height="24" width="24"/></g><g><g><polygon points="6.41,6 5,7.41 9.58,12 5,16.59 6.41,18 12.41,12"/><polygon points="13,6 11.59,7.41 16.17,12 11.59,16.59 13,18 19,12"/></g></g></svg>
           </a>
@@ -158,7 +159,7 @@
           </div>
           <div class="col-md-9 mx-auto">
             <div class="row my-5 justify-content-start">
-              <h1>2022</h2>
+              <h2>2022</h2>
               <div class="row journey-item rounded-3">
                 <div class="col-md-10 mx-auto px-3 py-5">
                   <h3>EXPANSION</h3>
@@ -167,7 +168,7 @@
               </div>
             </div>
             <div class="row my-5">
-              <h1>2021</h2>
+              <h2>2021</h2>
               <div class="row journey-item rounded-3">
                 <div class="col-md-10 mx-auto px-3 py-5">
                   <h3>PRODUCTS ADDITION</h3>
@@ -176,7 +177,7 @@
               </div>
             </div>
             <div class="row my-5">
-              <h1>2020</h2>
+              <h2>2020</h2>
               <div class="row journey-item rounded-3">
                 <div class="col-md-10 mx-auto px-3 py-5">
                   <h3>OPENING</h3>
@@ -204,13 +205,13 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="../../public/storage/about-us-images/corgi.jpg" class="d-block" alt="...">
+                <img src="{{asset('storage/about-us-images/corgi.jpg')}}" class="d-block" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="../../public/storage/about-us-images/white-cat.jpg" class="d-block" alt="...">
+                <img src="{{asset('storage/about-us-images/white-cat.jpg')}}" class="d-block" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="../../public/storage/about-us-images/golden-retriever.jpg" class="d-block" alt="...">
+                <img src="{{asset('storage/about-us-images/golden-retriever.jpg')}}" class="d-block" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#petImageCarousel" data-bs-slide="prev">
@@ -268,11 +269,7 @@
       </div>
     </main>
     <footer>
-      <!-- Footer loaded from assets/parts/footer.js -->
-      <script src="../../public/storage/parts/footer.js"></script>
+      {{view('parts.footer')}}
     </footer>
-    <script src="../../public/storage/library/bootstrap.min.js"></script>
-    <script src="../../public/storage/library/bootstrap.min.js"></script>
-    <script src="../../public/storage/library/jquery-3.6.0.min.js"></script>
   </body>
 </html>

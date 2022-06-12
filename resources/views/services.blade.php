@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>BlieBlue - Services</title>
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../../public/style.css" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="../../public/storage/library/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +38,7 @@
     <h1 class="accordion-body  style2"> S E R V I C E S </h1>
     <nav aria-label="breadcrumb " style="--bs-breadcrumb-divider: '>';">
         <ol class="breadcrumb justify-content-center  ">
-            <li class="breadcrumb-item "><a class="style1" href="landing.page.html">Home</a></li>
+            <li class="breadcrumb-item "><a class="style1" href="landing_page.blade.php">Home</a></li>
             <li aria-current="page" class="breadcrumb-item active text-white">Services</li>
         </ol>
     </nav>
@@ -64,7 +66,7 @@
     <button class="btn btn-lg btn-block text-white mt-3 " style="background-color:#7070B8;   height:70px; width:120px;"
             type="button">Pet Delivery
     </button>
-	
+
 </div>
 
 
@@ -76,7 +78,7 @@
     <button class="btn btn-lg btn-block text-white mt-5 " style="background-color:#7070B8; margin-right:50px; height:70px; width:120px;"
             type="button">Air Purifier
     </button>
-	
+
 	    <button class="btn btn-lg btn-block text-white mt-5 "
             style="background-color:#7070B8; margin-right:50px; height:70px; width:120px;"
             type="button">Home Cleaning

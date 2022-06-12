@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,26 +7,17 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Blieblue - About Us</title>
-    <link href="../css/style.css" rel="stylesheet"/>
 
-    <!-- Bootstrap -->
-    <link href="../../public/storage/library/bootstrap.min.css" rel="stylesheet">
-    <script src="../../public/storage/library/bootstrap.min.js"></script>
-    <!-- JQuery -->
-    <script src="../../public/storage/library/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{asset('style.css')}}"/>
+    <link rel="stylesheet" href="{{asset('about-us-style.css')}}"/>
+    <link rel="stylesheet" href="{{asset('storage/library/bootstrap.min.css')}}"/>
+    <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
     <!-- Google material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <!-- Linked -->
-    <link href="../css/style.css" rel="stylesheet"/>
-    <link href="../../public/storage/library/bootstrap.min.css" rel="stylesheet"/>
-
-    <script src="../../public/storage/library/bootstrap.min.js"></script>
-    <script src="../../public/storage/library/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <header>
-    <!-- Header loaded from assets/parts/header.html -->
-    <script src="../../public/storage/parts/header.js"></script>
+    {{view('parts.header')}}
 
     <!-- banner -->
     <section id="banner-contact-us">
@@ -34,7 +27,7 @@
                 <h1 class="contact-us-heading text-center">CONTACT- US</h1>
                 <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>'; color: #F4F7F8;">
                     <ol class="breadcrumb justify-content-center mb-3 mt-3">
-                        <li class="home-breadcrumb breadcrumb-item"><a href="landing.page.html">Home</a></li>
+                        <li class="home-breadcrumb breadcrumb-item"><a href="landing_page.blade.php">Home</a></li>
                         <li aria-current="page" class="breadcrumb-item active"><strong>Contact Us</strong></li>
                     </ol>
                 </nav>
@@ -99,10 +92,7 @@
     </form>
 </div>
 <footer>
-    <!-- Footer loaded from assets/parts/footer.js -->
-    <script src="../../public/storage/parts/footer.js"></script>
+    {{view('parts.footer')}}
 </footer>
-<script src="assets//library/bootstrap.min.js"></script>
-<script src="assets//library/jquery-3.6.0.min.js"></script>
 </body>
 </html>

@@ -6,20 +6,18 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Blieblue - About Us</title>
-    <link href="../css/style.css" rel="stylesheet"/>
 
+    <link rel="stylesheet" href="{{asset('style.css')}}"/>
     <!-- Bootstrap -->
-    <link href="../../public/storage/library/bootstrap.min.css" rel="stylesheet">
-    <script src="../../public/storage/library/bootstrap.min.js"></script>
-    <!-- JQuery -->
-    <script src="../../public/storage/library/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{asset('storage/library/bootstrap.min.css')}}"/>
+    <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
     <!-- Google material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 </head>
 <body>
 <!-- Header loaded from assets/parts/header.html -->
 <header>
-    <script src="../../public/storage/parts/header.js"></script>
+    {{view('parts.header')}}
 </header>
 <main>
     <div class="container-fluid product-banner">
@@ -27,7 +25,7 @@
         <div class="breadcrumb-container">
             <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="landing.page.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="landing_page.blade.php">Home</a></li>
                     <li aria-current="page" class="breadcrumb-item active">Products</li>
                 </ol>
             </nav>
@@ -230,9 +228,7 @@
     </div>
 </main>
 <footer>
-    <script src="../../public/storage/parts/footer.js"></script>
+    {{view('parts.footer')}}
 </footer>
-<script src="../../public/storage/library/bootstrap.min.js"></script>
-<script src="../../public/storage/library/jquery-3.6.0.min.js"></script>
 </body>
 </html>
