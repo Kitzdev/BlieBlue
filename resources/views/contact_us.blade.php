@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="{{asset('style.css')}}"/>
     <link rel="stylesheet" href="{{asset('about-us-style.css')}}"/>
-    <link rel="stylesheet" href="{{asset('storage/library/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('library/bootstrap.min.css')}}"/>
     <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
     <!-- Google material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>

@@ -10,9 +10,10 @@
     <link href="../../public/style.css" rel="stylesheet">
 
     <!-- Bootstrap -->
-    <link href="../../public/storage/library/bootstrap.min.css" rel="stylesheet">
-    <!-- JQuery -->
-    <script src="../../public/storage/library/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{asset('style.css')}}"/>
+    <link rel="stylesheet" href="{{asset('about-us-style.css')}}"/>
+    <link rel="stylesheet" href="{{asset('library/bootstrap.min.css')}}"/>
+    <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
     <!-- Google material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <style type="text/css">
