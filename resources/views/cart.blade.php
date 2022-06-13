@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart Items</title>
 
-  <link rel="stylesheet" href="{{asset('style.css')}}"/>
-  <link rel="stylesheet" href="{{asset('about-us-style.css')}}"/>
+  <link rel="stylesheet" href="{{asset('cart.css')}}"/>
   <link rel="stylesheet" href="{{asset('library/bootstrap.min.css')}}"/>
-  <link rel="stylesheet" href="{{asset('cart-items.css')}}"/>
+  <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
 </head>
 <body>
   <header></header>
@@ -19,7 +21,7 @@
       <!-- title -->
       <div class="justify-content-center row my-3">
         <div class="justify-content-start col-md-12 d-inline-flex align-items-center">
-          <a class="button-secondary rounded-circle btn me-3" href="#" role="button"><</a>
+          <a class="button-secondary rounded-circle btn me-3" href="/" role="button"><</a>
           <h1>Cart Items</h1>
         </div>
       </div>
@@ -38,7 +40,7 @@
                   
                   <!-- img -->
                   <div class="col-lg-3">
-                    <img class="rounded" src="gunung.png" alt="">
+                    <img class="rounded" src="{{asset('storage/about-us-images/cat-blanket.jpg')}}" alt="">
                   </div>
 
                   <!-- desc -->
@@ -162,6 +164,8 @@
       </div>
     </div>
   </main>
-  <footer></footer>
+  <footer>
+    {{view('parts.footer')}}
+  </footer>
 </body>
 </html>

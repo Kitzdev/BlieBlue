@@ -35,6 +35,10 @@ Route::get('/service', function () {
     return view('services');
 });
 
+Route::get('/cart', function () {
+    return view('cart');
+});
+
 // Testing ...
 
 // Default page (dashboard)
