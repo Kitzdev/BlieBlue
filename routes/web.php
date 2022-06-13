@@ -36,4 +36,13 @@ Route::get('/service', function () {
 });
 
 Route::get('/dashboard', [ItemController::class, 'index']);
-Route::get('/dashboard/show', [ItemController::class, 'showItem']);
+
+Route::get('/dashboard/items', [ItemController::class, 'showItems']);
+
+Route::post('/dashboard/items/add', [ItemController::class, 'addItem']);
+
+Route::get('/dashboard/items/{item_id}', [ItemController::class, 'searchItemRow']);
+
+Route::post('/dashboard/items/{item_id}/update', [ItemController::class, 'updateItem']);
+
+Route::get('/dashboard/items/{item_id}/delete', [ItemController::class, 'deleteItem']);
