@@ -8,15 +8,17 @@ use App\Models\Item;
 
 class ItemController extends Controller
 {
-    public function __construct()
-    {
+    // Init "Item model" object
+    public function __construct() {
        $this->Item = new Item();
     } 
 
+    // Returns default page (dashboard view)
     public function index() {
         return view('dummy.dashboard');
     }
 
+    // Search row by item_id, returns dashboard_items view
     public function searchItemRow($item_id) {
         $item = [
             "item" => $this->Item->searchItemRow($item_id)
@@ -24,7 +26,8 @@ class ItemController extends Controller
 
         return view('dummy.dashboard_items', ["items" => $item]);
     }
-    
+
+    // Add item into table, redirect to default page (dashboard view)
     public function addItem(Request $request) {
         $item = [
             "item_name" => $request->input('item_name'),
@@ -38,6 +41,7 @@ class ItemController extends Controller
         return redirect('/dummy.dashboard');
     }
 
+    // Show all items in table "item", returns dashboard_items view
     public function showItems() {
         $items = [
             "items" => $this->Item->showData()
@@ -46,6 +50,7 @@ class ItemController extends Controller
         return view('dummy.dashboard_items', ["items" => $items]);
     }
 
+    // Update item, redirect to default page (dashboard view)
     public function updateItem(Request $request) {
         
         $item = [
@@ -61,6 +66,7 @@ class ItemController extends Controller
         return redirect('/dummy.dashboard');
     }
 
+    // Delete item, redirect to default page (dashboard view)
     public function deleteItem(Request $request) {
         $item_id = $request->input('item_id');
 

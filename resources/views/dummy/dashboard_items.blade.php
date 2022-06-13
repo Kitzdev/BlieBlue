@@ -7,6 +7,7 @@
     <title>Dashboard item</title>
 </head>
 <body>
+    <!-- Show all items passed ( may contain only one item (search row) ) -->
     @if ($items->count())
         @foreach($items as $item)
             <h1>{{$item["item_id"]}}</h1>

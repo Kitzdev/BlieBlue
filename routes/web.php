@@ -35,14 +35,24 @@ Route::get('/service', function () {
     return view('services');
 });
 
+// Testing ...
+
+// Default page (dashboard)
 Route::get('/dashboard', [ItemController::class, 'index']);
 
+// Show all items
 Route::get('/dashboard/items', [ItemController::class, 'showItems']);
 
+// Add item
 Route::post('/dashboard/items/add', [ItemController::class, 'addItem']);
 
+// Search item
 Route::get('/dashboard/items/{item_id}', [ItemController::class, 'searchItemRow']);
 
+// Update item
 Route::post('/dashboard/items/{item_id}/update', [ItemController::class, 'updateItem']);
 
+// Delete item
 Route::get('/dashboard/items/{item_id}/delete', [ItemController::class, 'deleteItem']);
+
+// ... CRUD operation.
