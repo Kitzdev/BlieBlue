@@ -10,8 +10,29 @@ class Item extends Model
 {
     use HasFactory;
 
-    public function showItem() {
-        $items = DB::table('item')->get();
-        return $items;
+    public function showData()
+	{
+	   $items = DB::table('item')->get();
+       return $items;
+	}
+
+    public function addItem($item) {
+        $item = DB::table('item')->insert($item);
+        return $item;
+    }
+
+    public function searchItemRow($item_id) {
+        $item = DB::table('item')->where('item_id = ', $item_id);
+        return $item;
+    }
+
+    public function deleteItem($item_id) {
+        $item = DB::table('item')->where('item_id = ', $item_id)->delete();
+        return $item;
+    }
+
+    public function updateItem($item_id, $item) {
+        $item = DB::table('item')->where('item_id = ', $item_id)->update($item);
+        return $item;
     }
 }

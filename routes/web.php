@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Item;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +35,5 @@ Route::get('/service', function () {
     return view('services');
 });
 
-Route::get('/dashboard', [ProductController::class, 'index']);
+Route::get('/dashboard', [ItemController::class, 'index']);
+Route::get('/dashboard/show', [ItemController::class, 'showItem']);
