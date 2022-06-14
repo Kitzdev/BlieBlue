@@ -33,7 +33,7 @@ class ItemController extends Controller
             "item_name" => $request->input('item_name'),
             "price" => $request->input('price'),
             "item_type" => $request->input('item_type'),
-            "item_description" => $request->input('item_description'),
+            "item_description" => $request->input('description'),
             "flag" => $request->input('flag'),
         ];
 
@@ -47,7 +47,7 @@ class ItemController extends Controller
             "items" => $this->Item->showData()
         ];
 
-        return view('dummy.dashboard_items', ["items" => $items]);
+        return view('dummy.dashboard_items', $items);
     }
 
     // Update item, redirect to default page (dashboard view)

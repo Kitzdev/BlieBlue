@@ -14,7 +14,6 @@
   <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
 </head>
 <body>
-  <header></header>
   <main class="container-md mx-auto p-5">
     <div class="container-md">
       

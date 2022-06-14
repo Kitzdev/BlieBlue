@@ -19,8 +19,13 @@ class Item extends Model
 
     // Add item into table "item"
     public function addItem($item) {
-        $item = DB::table('item')->insert($item);
-        return $item;
+        $item_name  = $item['item_name'];
+        $price      = $item['price'];
+        $item_type  = $item['item_type'];
+        $item_description = $item['item_description'];
+        $flag       = $item['flag'];
+
+        DB::insert('INSERT INTO item (item_name, price, item_type, description, flag) VALUES (?, ?, ?, ?, ?)', [$item_name, $price, $item_type, $item_description, $flag]);
     }
 
     // Search row by item_id
