@@ -1,6 +1,7 @@
 #base {
     background-color: #F4F7F8;
     overflow-y: hidden;
+    height: 500px !important;
 }
 
 img {
