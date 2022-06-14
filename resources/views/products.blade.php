@@ -159,7 +159,7 @@ $sectionRenderer = function (callable $template, array $parameter, $title, $sect
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Blieblue - About Us</title>
 
-    <link rel="stylesheet" href="{{asset('style.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('library/bootstrap.min.css')}}"/>
     <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
 </head>

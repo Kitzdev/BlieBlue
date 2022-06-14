@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart Items</title>
 
-  <link rel="stylesheet" href="{{asset('style.css')}}"/>
+  <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
   <link rel="stylesheet" href="{{asset('library/bootstrap.min.css')}}"/>
   <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
 </head>
