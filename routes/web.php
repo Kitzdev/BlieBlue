@@ -33,6 +33,10 @@ Route::get('/services', function () {
     return view('services');
 });
 
+Route::get('/cart', function () {
+    return view('cart');
+});
+
 Route::get('/dashboard/product', function () {
     return view('dashboard_products');
 });

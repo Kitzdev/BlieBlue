@@ -60,7 +60,7 @@
             <div class="col-md-4">
               <div class="card my-4 mx-2">
                 <div class="img-box">
-                  <img src="../../public/storage/about-us-images/whiskas.png" class="card-img-top transparent-bg-img" alt="..." />
+                  <img src="{{asset('storage/about-us-images/whiskas.png')}}" class="card-img-top transparent-bg-img" alt="..." />
                 </div>
                 <div class="card-body mx-2 mb-2">
                   <h5 class="card-title">Pet Food</h5>
@@ -71,7 +71,7 @@
             <div class="col-md-4">
               <div class="card my-4 mx-2">
                 <div class="img-box">
-                  <img src="../../public/storage/about-us-images/food-dispenser.jpg" class="card-img-top" alt="..." />
+                  <img src="{{asset('storage/about-us-images/food-dispenser.jpg')}}" class="card-img-top" alt="..." />
                 </div>
                 <div class="card-body mx-2 mb-2">
                   <h5 class="card-title">Support Tools</h5>
@@ -82,7 +82,7 @@
             <div class="col-md-4">
               <div class="card my-4 mx-2">
                 <div class="img-box">
-                  <img src="../../public/storage/about-us-images/cat-blanket.jpg" class="card-img-top" alt="..." />
+                  <img src="{{asset('storage/about-us-images/cat-blanket.jpg')}}" class="card-img-top" alt="..." />
                 </div>
                 <div class="card-body mx-2 mb-2">
                   <h5 class="card-title">Pet Accessories</h5>
@@ -126,7 +126,7 @@
               <p>We train your pet with various approaches with our proffesional pet trainer</p>
             </div>
             <div class="col-md-6 service-img text-center swappped-img">
-              <img src="{{asset('storage/about-us-images/pet-taking-bath.png')}}" alt="Dog Jumping" />
+              <img src="{{asset('storage/about-us-images/dog-jumping.png')}}" alt="Dog Jumping" />
             </div>
           </div>
           <div class="row service-item mt-5 mx-0 justify-content-start">
