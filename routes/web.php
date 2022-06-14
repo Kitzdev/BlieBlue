@@ -32,3 +32,12 @@ Route::get('/products', function () {
 Route::get('/services', function () {
     return view('services');
 });
+
+Route::get('/dashboard/product', function () {
+    return view('dashboard_products');
+});
+
+Route::get('/dashboard/member', function () {
+    return view('dashboard_member');
+});
+
