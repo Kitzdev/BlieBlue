@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato:wght@400;700&family=Quicksand:wght@700&family=Roboto+Slab&family=Roboto:wght@700&display=swap');
+
+.title-header {
+    background-color: #676FA3;
+    padding: 2vh 0 1vh 0;
+    margin: 5vh 0 0 0;
+}
+
+.breadcrumb-item > a, .breadcrumb-item > strong, .breadcrumb-item::before, .contact-us-heading {
+    color: #F4F7F8 !important;
+}
+
+header {
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+#header_blieblue_text {
+    color: #3110FD;
+}
+
+#banner {
+    background-color: #7070B8;
+    color: #FFFFFF;
+    height: auto;
+    margin: inherit;
+}
+
+.navbar-anchor > a {
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.menu-hamburger {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.menu-hamburger:after {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    padding-left: 100%;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.5s
+}
+
+.menu-hamburger:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.product-banner {
+    background-color: #676FA3;
+    padding: 2vh 0 1vh 0;
+    margin: 5vh 0 0 0;
+}
+
+.product-banner > p {
+    color: #F4F7F8;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    margin: 0;
+    line-break: auto;
+}
+
+.breadcrumb-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.breadcrumb-container > nav > ol > li, .breadcrumb-container > nav > ol > li > a {
+    color: #F4F7F8 !important;
+    text-decoration: none;
+}
+
+.breadcrumb-container > nav > ol > li::before {
+    color: #F4F7F8 !important;
+}
+
+.best-product > h2, .our-favourite > h2, .pet-food > h2 {
+    padding: 0 3vw 1vh 1vw;
+    margin: 17vh 3vw;
+    border-bottom: 5px solid #676FA3;
+    width: fit-content;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    color: black
+}
+
+.best-product-card-container, .our-favourite-card-container {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.best-product-card {
+    box-shadow: 1px 4px 3px 4px rgba(196, 196, 196, 0.7);
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    font-weight: 400;
+    width: 18rem;
+    justify-content: center;
+    margin: 50px 0 0 0;
+}
+
+.best-product-card-information {
+    width: 100%;
+    padding: 0 0 0 3%;
+}
+
+.best-product-card-information > img {
+    border-radius: 0.25rem;
+    margin: -50px 0 0 0;
+    width: 280px;
+    height: 215px;
+    padding: 7%;
+}
+
+.card-body > a {
+    background-color: #676FA3;
+    width: 100%;
+    font-size: 0.7rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    color: white;
+}
+
+.card-title {
+    font-weight: 400;
+    color: black;
+    margin: 10px 0;
+}
+
+.card-price {
+    font-size: 12px;
+    margin: 30px 0;
+}
+
+.card-text {
+    font-family: 'Inter', sans-serif;
+    color: #616265;
+    font-size: 12px;
+    margin: 10px 0;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #FF5959;
+}
+
+.our-favourite-card {
+    box-shadow: 1px 4px 3px 4px rgba(196, 196, 196, 0.7);
+    width: 18rem;
+    height: fit-content;
+}
+
+.our-favourite-card > img {
+    border-radius: 0.25rem;
+    width: 100%;
+}
+
+.pet-food-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    padding: 0 0 0 1vw;
+    margin: 17vh 0 17vh 2vw;
+}
+
+.image-wrapper {
+    width: 150px;
+    height: 143px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper ~ p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.image-wrapper ~ p:first-of-type {
+    width: 50%;
+    text-align: center;
+    line-break: auto;
+    margin: 0 0 0 -2vw;
+}
+
+.image-wrapper ~ p:last-of-type {
+    margin: 0 3vw 0 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #676FA3;
+    min-height: 30vh;
+    color: #F4F7F8;
+}
+
+.footer-navigation {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    justify-content: center;
+    margin: 5vh 0 0 0;
+}
+
+.footer-navigation > h2 {
+    font-family: 'Quicksand', 'sans-serif';
+    font-weight: 700;
+}
+
+.footer-navigation > .navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 7vh 0 0 0;
+    justify-content: space-between;
+}
+
+.footer-navigation > .navigation > a {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    padding: 0 2vw 0 0;
+}
+
+.footer-detail {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    justify-self: self-end;
+    align-items: flex-end;
+    margin: 5vh 4vw 0 0;
+}
+
+.footer-detail > p {
+    margin: 0;
+    color: #EEF2FF;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    text-wrap: normal;
+}
+
+.footer-detail > p:first-child {
+    letter-spacing: 0.2em;
+}
+
+.footer-detail > p:last-child {
+    margin: 0;
+    color: #EEF2FF;
+    font-family: 'Lato', sans-serif;
+    text-align: right;
+}
+
+.footer-social-media {
+    display: flex;
+    flex-direction: row;
+    padding: 2vh 0 4vh 0;
+}
+
+.footer-social-media > img {
+    padding: 0 0 0 20px;
+    width: 45px;
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #364063;
+    min-height: 4vh;
+}
+
+.footer-copyright > p {
+    margin: 0;
+    color: #F4F7F8;
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
+@media screen and (max-width: 950px) {
+    .title-header {
+        background-color: #676FA3;
+        text-align: center;
+    }
+
+    .contact-us-heading {
+        color: #F4F7F8 !important;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        letter-spacing: 0.5rem;
+    }
+
+    .breadcrumb-item {
+        color: #F4F7F8 !important;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .breadcrumb-item::before {
+        color: #f4f7f8 !important;
+    }
+
+    /*text si home gamau putih -_-*/
+    /* Descendant combinator */
+    .breadcrumb-item a {
+        color: #F4F7F8 !important;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .home-breadcrumb:hover {
+        text-decoration: underline;
+    }
+
+    .tagline {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    }
+
+    .tagline1 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    }
+
+    .submit-btn {
+        background-color: #FF5959 !important;
+        border: none !important;
+    }
+
+    .maps {
+        letter-spacing: 0.5rem;
+        font-family: 'Lato', sans-serif;
+        font-size: 3em;
+    }
+
+    .submit-btn {
+        background-color: #FF5959 !important;
+        border: none !important;
+    }
+
+    .image-wrapper {
+        width: 120px;
+        height: 155px;
+    }
+
+    .image-wrapper ~ p:last-of-type {
+        width: fit-content;
+        margin: 0;
+    }
+
+    .footer-navigation {
+        width: 50%;
+        flex-basis: 50%;
+    }
+
+    .footer-detail {
+        width: 50%;
+        flex-basis: 50%;
+        margin-right: 0;
+    }
+}
