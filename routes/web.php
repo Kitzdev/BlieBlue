@@ -46,12 +46,28 @@ Route::get('/dashboard/member', function () {
 });
 
 
-// Delete item
-Route::post('/dashboard/items/{item_id}/delete', [ItemController::class, 'deleteItem']);
+// Dashboard Item...
 
-// ... CRUD operation.
-
-// Testing sbadmin
-Route::get('/tables', function () {
-    return view('tables');
+// Add item
+Route::get('/dashboard/product/add', function () {
+    return view('dashboard_add');
 });
+
+// Submit add item
+Route::post('/dashboard/product/add/submit', [ItemController::class, 'addItem']);
+
+// Show all items
+Route::get('/dashboard/product', function () {
+    return view('dashboard_items', [ItemController::class, 'showItems']);
+});
+
+// Edit item page
+Route::get('/dashboard/product/edit/{item_id}', [ItemController::class, 'editItem']);
+
+// Update item
+Route::post('/dashboard/product/update/{item_id}', [ItemController::class, 'updateItem']);
+
+// Delete item
+Route::post('/dashboard/product/delete/{item_id}', [ItemController::class, 'deleteItem']);
+
+// end of Dashboard Item

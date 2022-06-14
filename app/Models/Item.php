@@ -11,9 +11,9 @@ class Item extends Model
     use HasFactory;
 
     // Show all items in table "item"
-    public function showData()
+    public function getItem()
 	{
-	   $items = DB::table('item')->get();
+	   $items = DB::select('SELECT * FROM item');
        return $items;
 	}
 

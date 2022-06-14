@@ -40,16 +40,25 @@ class ItemController extends Controller
         ];
 
         $this->Item->addItem($item);
-        return redirect('/dashboard/items');
+        return redirect('/dashboard/product');
     }
 
     // Show all items in table "item", returns dashboard_items view
     public function showItems() {
         $items = [
-            "items" => $this->Item->showData()
+            "items" => collect($this->Item->getItem())
         ];
 
-        return view('dummy.dashboard_items', $items);
+        return view('dashboard_items', $items);
+    }
+
+    
+    public function editItem($item_id) {
+        $item = [
+            "item" => collect($this->Item->searchItemRow($item_id))
+        ];
+
+        return view('item_edit', $item);
     }
 
     // Update item, redirect to default page (dashboard view)
@@ -68,10 +77,9 @@ class ItemController extends Controller
     }
 
     // Delete item, redirect to default page (dashboard view)
-    public function deleteItem(Request $request) {
-        $item_id = $request->input('item_id');
+    public function deleteItem($item_id) {
 
         $this->Item->deleteItem($item_id);
-        return redirect('/dashboard/items');
+        return redirect('/dashboard/product');
     }
 }
