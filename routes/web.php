@@ -45,3 +45,13 @@ Route::get('/dashboard/member', function () {
     return view('dashboard_member');
 });
 
+
+// Delete item
+Route::post('/dashboard/items/{item_id}/delete', [ItemController::class, 'deleteItem']);
+
+// ... CRUD operation.
+
+// Testing sbadmin
+Route::get('/tables', function () {
+    return view('tables');
+});
