@@ -28,17 +28,15 @@
 </head>
 <body>
 
-<!-- Header loaded from assets/parts/header.html -->
 <header>
-    <script src="../../public/storage/parts/header.js"></script>
+    {{view('parts.header')}}
 </header>
-
 
 <div class="container-fluid row text-center py-3" id="banner">
     <h1 class="accordion-body  style2"> S E R V I C E S </h1>
     <nav aria-label="breadcrumb " style="--bs-breadcrumb-divider: '>';">
         <ol class="breadcrumb justify-content-center  ">
-            <li class="breadcrumb-item "><a class="style1" href="landing_page.blade.php">Home</a></li>
+            <li class="breadcrumb-item "><a class="style1" href="/">Home</a></li>
             <li aria-current="page" class="breadcrumb-item active text-white">Services</li>
         </ol>
     </nav>
@@ -88,8 +86,6 @@
     </button>
 </div>
 
-
-
 <div class=" container-fluid  text-center ">
     <button class="btn btn-sm text-white mt-5 mb-5 "
             type="button"><img height="22" src="assets/Service Images/download (1).jpg" width="29"></button>
@@ -99,9 +95,7 @@
 <img class="float-end" src="assets/Service Images/service image.jpg">
 
 <footer>
-    <script src="../../public/storage/parts/footer.js"></script>
+    {{view('parts.footer')}}
 </footer>
-<script src="../../public/storage/library/bootstrap.min.js"></script>
-<script src="../../public/storage/library/jquery-3.6.0.min.js"></script>
 </body>
 </html>
