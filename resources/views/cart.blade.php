@@ -9,10 +9,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart Items</title>
 
-  <link rel="stylesheet" href="{{asset('cart.css')}}"/>
+  <link rel="stylesheet" href="{{asset('style.css')}}"/>
   <link rel="stylesheet" href="{{asset('library/bootstrap.min.css')}}"/>
   <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
 </head>
+
+<style>
+  #base {
+    background-color: #F4F7F8;
+    overflow-y: hidden;
+    height: 500px !important;
+  }
+
+  .cart-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  #item-base {
+      background-color: #F4F7F8;
+  }
+
+  .cart-link {
+      text-decoration: none;
+  }
+
+  #base-2 {
+      overflow-y: scroll;
+      object-fit: contain;
+      
+  }
+
+  .button-primary {
+      background-color: #FF5959;
+      color: white;
+  }
+
+  .button-secondary {
+      background-color: #EEF2FF;
+  }
+
+  .button-primary, .button-secondary, #base {
+      box-shadow: 0px 0.68px 1.36px 0px rgba(0,0,0,0.3);
+  }
+</style>
+
 <body>
   <main class="container-md mx-auto p-5">
     <div class="container-md">
@@ -20,7 +62,7 @@
       <!-- title -->
       <div class="justify-content-center row my-3">
         <div class="justify-content-start col-md-12 d-inline-flex align-items-center">
-          <a class="button-secondary rounded-circle btn me-3" href="/" role="button"><</a>
+          <a class="cart-link button-secondary rounded-circle btn me-3" href="/" role="button"><</a>
           <h1>Cart Items</h1>
         </div>
       </div>
@@ -39,7 +81,7 @@
                   
                   <!-- img -->
                   <div class="col-lg-3">
-                    <img class="rounded" src="{{asset('storage/about-us-images/cat-blanket.jpg')}}" alt="">
+                    <img class="rounded cart-img" src="{{asset('storage/about-us-images/cat-blanket.jpg')}}" alt="">
                   </div>
 
                   <!-- desc -->
@@ -70,7 +112,7 @@
                   </div>
   
                   <div class="col-lg-1 d-flex justify-content-end">
-                    <a href="#" class="link-danger">Remove</a>
+                    <a href="#" class="cart-link link-danger">Remove</a>
                   </div>
               </div>
             </div>
