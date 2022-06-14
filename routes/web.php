@@ -57,6 +57,6 @@ Route::get('/dashboard/items/{item_id}', [ItemController::class, 'searchItemRow'
 Route::post('/dashboard/items/{item_id}/update', [ItemController::class, 'updateItem']);
 
 // Delete item
-Route::get('/dashboard/items/{item_id}/delete', [ItemController::class, 'deleteItem']);
+Route::post('/dashboard/items/{item_id}/delete', [ItemController::class, 'deleteItem']);
 
 // ... CRUD operation.

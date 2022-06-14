@@ -19,12 +19,14 @@ class ItemController extends Controller
     }
 
     // Search row by item_id, returns dashboard_items view
-    public function searchItemRow($item_id) {
-        $item = [
-            "item" => $this->Item->searchItemRow($item_id)
+    public function searchItemRow(Request $request) {
+        $item_id = $request->input('item_id');
+
+        $items = [
+            "items" => collect($this->Item->searchItemRow($item_id))
         ];
 
-        return view('dummy.dashboard_items', ["items" => $item]);
+        return view('dummy.dashboard_items', $items);
     }
 
     // Add item into table, redirect to default page (dashboard view)
@@ -38,7 +40,7 @@ class ItemController extends Controller
         ];
 
         $this->Item->addItem($item);
-        return redirect('/dummy.dashboard');
+        return redirect('/dashboard/items');
     }
 
     // Show all items in table "item", returns dashboard_items view
@@ -52,7 +54,6 @@ class ItemController extends Controller
 
     // Update item, redirect to default page (dashboard view)
     public function updateItem(Request $request) {
-        
         $item = [
             "item_id" => $request->input('item_id'),
             "item_name" => $request->input('item_name'),
@@ -62,8 +63,8 @@ class ItemController extends Controller
             "flag" => $request->input('flag'),
         ];
 
-        $this->Item->updateItem($request->input('item_id'), $item);
-        return redirect('/dummy.dashboard');
+        $this->Item->updateItem($item);
+        return redirect('/dashboard/items');
     }
 
     // Delete item, redirect to default page (dashboard view)
@@ -71,6 +72,6 @@ class ItemController extends Controller
         $item_id = $request->input('item_id');
 
         $this->Item->deleteItem($item_id);
-        return redirect('/dummy.dashboard');
+        return redirect('/dashboard/items');
     }
 }
