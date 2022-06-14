@@ -31,7 +31,7 @@ Route::get('/products', function () {
     return view('products');
 });
 
-Route::get('/service', function () {
+Route::get('/services', function () {
     return view('services');
 });
 
@@ -60,3 +60,8 @@ Route::post('/dashboard/items/{item_id}/update', [ItemController::class, 'update
 Route::post('/dashboard/items/{item_id}/delete', [ItemController::class, 'deleteItem']);
 
 // ... CRUD operation.
+
+// Testing sbadmin
+Route::get('/tables', function () {
+    return view('tables');
+});
