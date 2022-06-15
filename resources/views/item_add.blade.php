@@ -39,6 +39,14 @@
                                 <label for="flag">Flag</label>
                                 <input type="text" class="form-control" id="flag" name="flag" placeholder="Flag">
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="image_name">Image name</label>
+                                <input type="text" class="form-control" id="image_name" name="image_name" placeholder="Image name">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="image_url">Image URL</label>
+                                <input type="text" class="form-control" id="image_url" name="image_url" placeholder="Image URL">
+                            </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>

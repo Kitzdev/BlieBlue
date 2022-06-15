@@ -37,16 +37,11 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
-Route::get('/dashboard/product', function () {
-    return view('dashboard_products');
-});
-
-Route::get('/dashboard/member', function () {
-    return view('dashboard_member');
-});
-
 
 // Dashboard Item...
+
+// Index route, show all times
+Route::get('/dashboard/items', [ItemController::class, 'showItems']);
 
 // Add item
 Route::get('/dashboard/items/add', function () {
@@ -55,9 +50,6 @@ Route::get('/dashboard/items/add', function () {
 
 // Submit add item
 Route::post('/dashboard/items/add/submit', [ItemController::class, 'addItem']);
-
-// Show all items
-Route::get('/dashboard/items', [ItemController::class, 'showItems']);
 
 // Edit item page
 Route::get('/dashboard/items/edit/{item_id}', [ItemController::class, 'editItem']);
@@ -69,3 +61,11 @@ Route::post('/dashboard/items/update/{item_id}', [ItemController::class, 'update
 Route::post('/dashboard/items/delete/{item_id}', [ItemController::class, 'deleteItem']);
 
 // end of Dashboard Item
+
+
+// Dashboard member 
+
+// Index route
+Route::get('/dashboard/member', function () {
+    return view('dashboard_member');
+});

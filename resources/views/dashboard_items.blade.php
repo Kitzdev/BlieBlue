@@ -62,13 +62,13 @@
         <hr class="sidebar-divider">
 
         <!-- Heading -->
-        <div class="sidebar-heading">Member</div>
+        <div class="sidebar-heading">User</div>
 
         <!-- Nav Item - Tables -->
         <li class="nav-item active">
-            <a class="nav-link" href="/dashboard/member">
+            <a class="nav-link" href="/dashboard/users">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Member</span></a>
+                <span>User</span></a>
         </li>
 
         <!-- Divider -->

@@ -37,6 +37,8 @@ class ItemController extends Controller
             "item_type" => $request->input('item_type'),
             "item_description" => $request->input('description'),
             "flag" => $request->input('flag'),
+            "image_name" => $request->input('image_name'),
+            "image_url" => $request->input('image_url'),
         ];
 
         $this->Item->addItem($item);
@@ -70,8 +72,6 @@ class ItemController extends Controller
             "item_type" => $request->input('item_type'),
             "description" => $request->input('description'),
             "flag" => $request->input('flag'),
-            "image_name" => $request->input('image_name'),
-            "image_url" => $request->input('image_url'),
         ];
 
         $this->Item->updateItem($item_id, $item);
