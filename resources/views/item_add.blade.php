@@ -13,7 +13,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header d-inline-flex">
+                        <a class="btn btn-primary me-3" href="/dashboard/items" role="button">Back</a>
                         <h3>Add Item</h3>
                     </div>
                     <div class="card-body">
@@ -38,6 +39,14 @@
                             <div class="form-group mb-3">
                                 <label for="flag">Flag</label>
                                 <input type="text" class="form-control" id="flag" name="flag" placeholder="Flag">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="image_name">Image name</label>
+                                <input type="text" class="form-control" id="image_name" name="image_name" placeholder="Image name">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="image_url">Image URL</label>
+                                <input type="text" class="form-control" id="image_url" name="image_url" placeholder="Image URL">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

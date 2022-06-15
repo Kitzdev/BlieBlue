@@ -24,8 +24,10 @@ class Item extends Model
         $item_type  = $item['item_type'];
         $description = $item['item_description'];
         $flag       = $item['flag'];
+        $image_name       = $item['image_name'];
+        $image_url       = $item['image_url'];
 
-        DB::insert('INSERT INTO item (item_name, price, item_type, description, flag) VALUES (?, ?, ?, ?, ?)', [$item_name, $price, $item_type, $description, $flag]);
+        DB::insert('INSERT INTO item (item_name, price, item_type, description, flag, image_name, image_url) VALUES (?, ?, ?, ?, ?, ?, ?)', [$item_name, $price, $item_type, $description, $flag, $image_name, $image_url]);
     }
 
     // Update item by item_id, require new Item data
@@ -40,7 +42,7 @@ class Item extends Model
         DB::update('UPDATE item SET item_name = ?, price = ?, item_type = ?, description = ?, flag = ? WHERE item_id = ?', [$item_name, $price, $item_type, $description, $flag, $item_id]);
     }
 
-    // Search row by item_id
+    // Search row by item_idx
     public function searchItemRow($item_id) {
         $item = DB::select('select * from item where item_id = ?', [$item_id]);
         return $item;
@@ -50,5 +52,4 @@ class Item extends Model
     public function deleteItem($item_id) {
         DB::delete('delete from item where item_id = ?', [$item_id]);
     }
-
 }
