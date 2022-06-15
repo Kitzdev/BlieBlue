@@ -46,30 +46,38 @@ class ItemController extends Controller
     // Show all items in table "item", returns dashboard_items view
     public function showItems() {
         $items = [
-            "items" => $this->Item->showData()
+            "items" => collect($this->Item->getItem())
         ];
 
-        return view('dummy.dashboard_items', $items);
+        return view('dashboard_items', $items);
+    }
+
+    // Edit item view controller, returns item_edit view
+    public function editItem($item_id) {
+        $items = [
+            "items" => collect($this->Item->searchItemRow($item_id))
+        ];
+
+        return view('item_edit', $items);
     }
 
     // Update item, redirect to default page (dashboard view)
     public function updateItem(Request $request) {
+        $item_id = $request->item_id;
         $item = [
-            "item_id" => $request->input('item_id'),
             "item_name" => $request->input('item_name'),
             "price" => $request->input('price'),
             "item_type" => $request->input('item_type'),
-            "item_description" => $request->input('item_description'),
+            "description" => $request->input('description'),
             "flag" => $request->input('flag'),
         ];
 
-        $this->Item->updateItem($item);
+        $this->Item->updateItem($item_id, $item);
         return redirect('/dashboard/items');
     }
 
     // Delete item, redirect to default page (dashboard view)
-    public function deleteItem(Request $request) {
-        $item_id = $request->input('item_id');
+    public function deleteItem($item_id) {
 
         $this->Item->deleteItem($item_id);
         return redirect('/dashboard/items');
