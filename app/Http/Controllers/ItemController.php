@@ -15,18 +15,7 @@ class ItemController extends Controller
 
     // Returns default page (dashboard view)
     public function index() {
-        return view('dummy.dashboard');
-    }
-
-    // Search row by item_id, returns dashboard_items view
-    public function searchItemRow(Request $request) {
-        $item_id = $request->input('item_id');
-
-        $items = [
-            "items" => collect($this->Item->searchItemRow($item_id))
-        ];
-
-        return view('dummy.dashboard_items', $items);
+        return view('/dashboard/items');
     }
 
     // Add item into table, redirect to default page (dashboard view)

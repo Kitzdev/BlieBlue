@@ -38,12 +38,12 @@ Route::get('/cart', function () {
 });
 
 
-// Dashboard Item...
+// Dashboard item
 
-// Index route, show all times
+// Item dashboard index page, show all items
 Route::get('/dashboard/items', [ItemController::class, 'showItems']);
 
-// Add item
+// Add item page
 Route::get('/dashboard/items/add', function () {
     return view('item_add');
 });
@@ -60,12 +60,33 @@ Route::post('/dashboard/items/update/{item_id}', [ItemController::class, 'update
 // Delete item
 Route::post('/dashboard/items/delete/{item_id}', [ItemController::class, 'deleteItem']);
 
-// end of Dashboard Item
+// end of Dashboard item
 
 
-// Dashboard member 
 
-// Index route
-Route::get('/dashboard/member', function () {
-    return view('dashboard_member');
+
+
+// Dashboard user
+
+// User dashboard index page, show all users
+Route::get('/dashboard/users', [UserController::class, 'showUsers']);
+
+// Add item
+Route::get('/dashboard/users/add', function () {
+    return view('user_add');
 });
+
+// Submit add item
+Route::post('/dashboard/users/add/submit', [UserController::class, 'addUser']);
+
+// Edit user page
+Route::get('/dashboard/users/edit/{user_id}', [UserController::class, 'editUser']);
+
+// Update item
+Route::post('/dashboard/users/update/{user_id}', [UserController::class, 'updateUser']);
+
+// Delete item
+Route::post('/dashboard/users/delete/{user_id}', [UserController::class, 'deleteUser']);
+
+
+// end of Dashboard user

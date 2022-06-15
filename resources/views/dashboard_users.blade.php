@@ -2,14 +2,16 @@
 ?>
     <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>BlieBlue Dashboard - Items</title>
+    <title>SB Admin 2 - Tables</title>
 
     <!-- Custom fonts for this template -->
     <link href="{{asset('fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -99,11 +101,11 @@
                 <h1 class="h3 mb-2 text-gray-800">BlieBlue Dashboard</h1>
 
                 <!-- DataTales Example -->
-                @if ($items->count())
+                @if ($users->count())
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Item List</h6>
-                            <a class="btn btn-primary mt-3" href="/dashboard/items/add" role="button">Add Item</a>
+                            <h6 class="m-0 font-weight-bold text-primary">User List</h6>
+                            <a class="btn btn-primary mt-3" href="/dashboard/users/add" role="button">Register User</a>
 
                         </div>
                         <div class="card-body">
@@ -111,37 +113,31 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Item ID</th>
-                                            <th>Item name</th>
-                                            <th>Price</th>
-                                            <th>Item type</th>
-                                            <th>Description</th>
-                                            <th>Flag</th>
-                                            <th>Image name</th>
-                                            <th>Image URL</th>
+                                            <th>User ID</th>
+                                            <th>User fullname</th>
+                                            <th>User name</th>
+                                            <th>Password</th>
+                                            <th>User role</th>
                                             <th></th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($items as $item)
+                                        @foreach($users as $user)
                                          <tr>
-                                            <td>{{$item->item_id}}</td>
-                                            <td>{{$item->item_name}}</td>
-                                            <td>{{$item->price}}</td>
-                                            <td>{{$item->item_type}}</td>
-                                            <td>{{$item->description}}</td>
-                                            <td>{{$item->flag}}</td>
-                                            <td>{{$item->image_name}}</td>
-                                            <td>{{$item->image_url}}</td>
+                                            <td>{{$user->user_id}}</td>
+                                            <td>{{$user->user_fullname}}</td>
+                                            <td>{{$user->user_name}}</td>
+                                            <td>{{$user->password}}</td>
+                                            <td>{{$user->user_role}}</td>
                                             <td>
-                                                <form action="/dashboard/items/edit/{{$item->item_id}}" method="get">
+                                                <form action="/dashboard/users/edit/{{$user->user_id}}" method="get">
                                                 @csrf
                                                     <input class="btn btn-outline-primary" type="submit" value="Edit">
                                                 </form>
                                             </td>
                                             <td>
-                                                <form action="/dashboard/items/delete/{{$item->item_id}}" method="post">
+                                                <form action="/dashboard/users/delete/{{$user->user_id}}" method="post">
                                                 @csrf
                                                     <input class="btn btn-outline-danger" type="submit" value="Delete">
                                                 </form>
@@ -155,9 +151,8 @@
                     </div>
                 @else
                     <div class="text-center">
-                        <h1 class="h3 mb-4 text-gray-800">There is no item</h1>
-                        <a class="btn btn-primary" href="/dashboard/items/add" role="button">Add Item</a>
-
+                        <h1 class="h3 mb-4 text-gray-800">There is no user</h1>
+                        <a class="btn btn-primary" href="/dashboard/users/add" role="button">Add User</a>
                     </div>
                 @endif
 

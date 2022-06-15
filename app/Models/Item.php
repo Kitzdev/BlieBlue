@@ -52,5 +52,4 @@ class Item extends Model
     public function deleteItem($item_id) {
         DB::delete('delete from item where item_id = ?', [$item_id]);
     }
-
 }
