@@ -17,8 +17,7 @@
             $description = $item->description;
             $item_type = $item->item_type;
             $flag = $item->flag;
-            $image_name = $item->image_name;
-            $image_url = $item->image_url;
+            $image_path = $item->image_path;
         ?>
 
         <div class="my-5 container">
@@ -30,7 +29,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="mb-3">Item ID :{{$item_id}} </h5>
-                            <form action="/dashboard/items/update/{{$item_id}}" method="post">
+                            <form action="/dashboard/items/update/{{$item_id}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <label for="item_name">Item Name</label>
@@ -54,11 +53,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="flag">Image name</label>
-                                    <input type="text" class="form-control" id="image_name" name="image_name" placeholder="Image name" value="{{$image_name}}">
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="flag">Image URL</label>
-                                    <input type="text" class="form-control" id="image_url" name="image_url" placeholder="Image URL" value="{{$image_url}}">
+                                    <input type="file" class="form-control" id="image" name="image" placeholder="Image name" value="{{$image_path}}"  accept="image/*">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>

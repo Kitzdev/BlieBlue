@@ -38,8 +38,9 @@ class Item extends Model
         $item_type  = $item['item_type'];
         $description = $item['description'];
         $flag       = $item['flag'];
+        $image_path = $item['image_path'];
 
-        DB::update('UPDATE item SET item_name = ?, price = ?, item_type = ?, description = ?, flag = ? WHERE item_id = ?', [$item_name, $price, $item_type, $description, $flag, $item_id]);
+        DB::update('UPDATE item SET item_name = ?, price = ?, item_type = ?, description = ?, flag = ?, image_path = ? WHERE item_id = ?', [$item_name, $price, $item_type, $description, $flag, $image_path, $item_id]);
     }
 
     // Search row by item_idx

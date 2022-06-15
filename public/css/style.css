@@ -293,6 +293,10 @@ header {
     font-style: normal;
 }
 
+.font-size-30px {
+    font-size: 30px;
+}
+
 @media screen and (max-width: 950px) {
     .title-header {
         background-color: #676FA3;

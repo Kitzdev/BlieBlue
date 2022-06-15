@@ -50,7 +50,7 @@
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link collapsed" href="/dashboard/items" data-target="#collapseTwo" aria-expanded="true"
                aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
@@ -65,7 +65,7 @@
         <div class="sidebar-heading">User</div>
 
         <!-- Nav Item - Tables -->
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="/dashboard/users">
                 <i class="fas fa-fw fa-table"></i>
                 <span>User</span></a>
@@ -118,7 +118,6 @@
                                             <th>Description</th>
                                             <th>Flag</th>
                                             <th>Image name</th>
-                                            <th>Image URL</th>
                                             <th></th>
                                             <th></th>
                                         </tr>
@@ -132,8 +131,7 @@
                                             <td>{{$item->item_type}}</td>
                                             <td>{{$item->description}}</td>
                                             <td>{{$item->flag}}</td>
-                                            <td>{{$item->image_name}}</td>
-                                            <td>{{$item->image_url}}</td>
+                                            <td><img src="{{asset("storage/$item->image_path")}}" alt="{{$item->item_name}}" width="50px"></td>
                                             <td>
                                                 <form action="/dashboard/items/edit/{{$item->item_id}}" method="get">
                                                 @csrf

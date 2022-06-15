@@ -1,6 +1,7 @@
 <?php
 ?>
 <script src="{{asset('library/jquery-3.6.0.min.js')}}"></script>
+<link rel="stylesheet" href="{{asset('fontawesome-free/css/all.min.css')}}">
 
 <div class="d-flex align-items-center justify-content-around bg-transparent flex-wrap header-container">
     <div class="d-flex navbar-brand align-items-center">
@@ -16,6 +17,9 @@
         <a href="/products" class="fs-6  px-4">PRODUCTS</a>
         <a href="/services" class="fs-6 px-4">SERVICES</a>
         <a href="/contact" class="fs-6 px-4">CONTACT US</a>
+    </div>
+    <div class="d-none d-lg-flex d-xl-flex navbar-brand justify-content-around flex-wrap me-5 navbar-anchor">
+        <a class="" href="/cart"><i class="fa fa-shopping-cart font-size-30px"></i></a>
     </div>
     <div class="d-none d-lg-flex d-xl-flex navbar-brand justify-content-around flex-wrap navbar-social-media">
         <img src="{{asset('storage/images/header/bx_bxl-facebook.png')}}" alt="Facebook Logo" class="px-3">
