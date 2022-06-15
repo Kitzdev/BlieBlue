@@ -28,14 +28,14 @@ class ItemController extends Controller
             "flag" => $request->input('flag'),
         ];
 
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-
-        $path = $request->file('image')->store('public/images');
-        $item['image_name'] = $path;
+        if ($request->hasFile('image')) {
+            $fileName = time() . '-' . $request->file('image')->getClientOriginalName();
+            $path = $request->file('image')->storeAs('images', $fileName, 'public_uploads');
+            $item['image_path'] = 'uploads/' . $path;
+        }
 
         $this->Item->addItem($item);
+
         return redirect('/dashboard/items');
     }
 
