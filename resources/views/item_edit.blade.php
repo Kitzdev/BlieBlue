@@ -17,6 +17,8 @@
             $description = $item->description;
             $item_type = $item->item_type;
             $flag = $item->flag;
+            $image_name = $item->image_name;
+            $image_url = $item->image_url;
         ?>
 
         <div class="my-5 container">
@@ -49,6 +51,14 @@
                                 <div class="form-group mb-3">
                                     <label for="flag">Flag</label>
                                     <input type="text" class="form-control" id="flag" name="flag" placeholder="Flag" value="{{$flag}}">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="flag">Image name</label>
+                                    <input type="text" class="form-control" id="image_name" name="image_name" placeholder="Image name" value="{{$image_name}}">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="flag">Image URL</label>
+                                    <input type="text" class="form-control" id="image_url" name="image_url" placeholder="Image URL" value="{{$image_url}}">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>

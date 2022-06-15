@@ -117,6 +117,8 @@
                                             <th>Item type</th>
                                             <th>Description</th>
                                             <th>Flag</th>
+                                            <th>Image name</th>
+                                            <th>Image URL</th>
                                             <th></th>
                                             <th></th>
                                         </tr>
@@ -129,6 +131,8 @@
                                             <td>{{$item->item_type}}</td>
                                             <td>{{$item->description}}</td>
                                             <td>{{$item->flag}}</td>
+                                            <td>{{$item->image_name}}</td>
+                                            <td>{{$item->image_url}}</td>
                                             <td>
                                                 <form action="/dashboard/items/edit/{{$item->item_id}}" method="get">
                                                 @csrf

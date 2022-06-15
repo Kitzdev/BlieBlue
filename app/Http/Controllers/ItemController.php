@@ -52,7 +52,7 @@ class ItemController extends Controller
         return view('dashboard_items', $items);
     }
 
-    // Edit item view controller, returns item_edit view
+    
     public function editItem($item_id) {
         $items = [
             "items" => collect($this->Item->searchItemRow($item_id))
@@ -70,6 +70,8 @@ class ItemController extends Controller
             "item_type" => $request->input('item_type'),
             "description" => $request->input('description'),
             "flag" => $request->input('flag'),
+            "image_name" => $request->input('image_name'),
+            "image_url" => $request->input('image_url'),
         ];
 
         $this->Item->updateItem($item_id, $item);
