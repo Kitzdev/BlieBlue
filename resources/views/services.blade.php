@@ -10,7 +10,7 @@
     <link href="../../public/css/style.css" rel="stylesheet">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{asset('style.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('library/bootstrap.min.css')}}"/>
     <script async src="{{asset('storage/library/bootstrap.min.js')}}"></script>
     <!-- Google material icons -->
@@ -88,11 +88,11 @@
 
 <div class=" container-fluid  text-center ">
     <button class="btn btn-sm text-white mt-5 mb-5 "
-            type="button"><img height="22" src="assets/Service Images/download (1).jpg" width="29"></button>
+            type="button"><img height="22" src="{{asset('storage/Service-Images/Whatsapp.jpg')}}" width="29"></button>
 </div>
 
-<img class="float-start" src="assets/Service Images/images.jpg">
-<img class="float-end" src="assets/Service Images/service image.jpg">
+<img class="float-start" src="{{asset('storage/Service-Images/Service-image1.jpeg')}}">
+<img class="float-end" src="{{asset('storage/Service-Images/Service-image2.jpeg')}}">
 
 <footer>
     {{view('parts.footer')}}
