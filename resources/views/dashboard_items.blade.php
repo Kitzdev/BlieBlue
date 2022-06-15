@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>BlieBlue Dashboard - Items</title>
 
     <!-- Custom fonts for this template -->
     <link href="{{asset('fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -46,7 +46,7 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Products
+            Item
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
@@ -54,7 +54,7 @@
             <a class="nav-link collapsed" href="/dashboard/items" data-target="#collapseTwo" aria-expanded="true"
                aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
-                <span>Products</span>
+                <span>Item</span>
             </a>
         </li>
 
@@ -96,14 +96,14 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+                <h1 class="h3 mb-2 text-gray-800">BlieBlue Dashboard</h1>
 
                 <!-- DataTales Example -->
                 @if ($items->count())
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Product List</h6>
-                            <a class="btn btn-primary mt-3" href="/dashboard/product/add" role="button">Add Item</a>
+                            <h6 class="m-0 font-weight-bold text-primary">Item List</h6>
+                            <a class="btn btn-primary mt-3" href="/dashboard/items/add" role="button">Add Item</a>
 
                         </div>
                         <div class="card-body">
@@ -130,13 +130,13 @@
                                             <td>{{$item->description}}</td>
                                             <td>{{$item->flag}}</td>
                                             <td>
-                                                <form action="/dashboard/product/edit/{{$item->item_id}}" method="get">
+                                                <form action="/dashboard/items/edit/{{$item->item_id}}" method="get">
                                                 @csrf
                                                     <input class="btn btn-outline-primary" type="submit" value="Edit">
                                                 </form>
                                             </td>
                                             <td>
-                                                <form action="/dashboard/product/delete/{{$item->item_id}}" method="post">
+                                                <form action="/dashboard/items/delete/{{$item->item_id}}" method="post">
                                                 @csrf
                                                     <input class="btn btn-outline-danger" type="submit" value="Delete">
                                                 </form>

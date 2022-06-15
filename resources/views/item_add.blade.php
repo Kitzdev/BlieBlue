@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BlieBlue Dashboard - Add Item</title>
 
     <link rel="stylesheet" href="{{asset('library/bootstrap.min.css')}}">
 </head>
@@ -17,7 +17,7 @@
                         <h3>Add Item</h3>
                     </div>
                     <div class="card-body">
-                        <form action="/dashboard/product/add/submit" method="post">
+                        <form action="/dashboard/items/add/submit" method="post">
                             @csrf
                             <div class="form-group mb-3">
                                 <label for="item_name">Item Name</label>

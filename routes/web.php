@@ -49,25 +49,23 @@ Route::get('/dashboard/member', function () {
 // Dashboard Item...
 
 // Add item
-Route::get('/dashboard/product/add', function () {
-    return view('dashboard_add');
+Route::get('/dashboard/items/add', function () {
+    return view('item_add');
 });
 
 // Submit add item
-Route::post('/dashboard/product/add/submit', [ItemController::class, 'addItem']);
+Route::post('/dashboard/items/add/submit', [ItemController::class, 'addItem']);
 
 // Show all items
-Route::get('/dashboard/product', function () {
-    return view('dashboard_items', [ItemController::class, 'showItems']);
-});
+Route::get('/dashboard/items', [ItemController::class, 'showItems']);
 
 // Edit item page
-Route::get('/dashboard/product/edit/{item_id}', [ItemController::class, 'editItem']);
+Route::get('/dashboard/items/edit/{item_id}', [ItemController::class, 'editItem']);
 
 // Update item
-Route::post('/dashboard/product/update/{item_id}', [ItemController::class, 'updateItem']);
+Route::post('/dashboard/items/update/{item_id}', [ItemController::class, 'updateItem']);
 
 // Delete item
-Route::post('/dashboard/product/delete/{item_id}', [ItemController::class, 'deleteItem']);
+Route::post('/dashboard/items/delete/{item_id}', [ItemController::class, 'deleteItem']);
 
 // end of Dashboard Item

@@ -48,7 +48,7 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Products
+            Item
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
@@ -56,7 +56,7 @@
             <a class="nav-link collapsed" href="/dashboard/items" data-target="#collapseTwo" aria-expanded="true"
                aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
-                <span>Products</span>
+                <span>Item</span>
             </a>
         </li>
 
