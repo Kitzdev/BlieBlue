@@ -52,8 +52,8 @@
                                     <input type="text" class="form-control" id="flag" name="flag" placeholder="Flag" value="{{$flag}}">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="flag">Image name</label>
-                                    <input type="file" class="form-control" id="image" name="image" placeholder="Image name" value="{{$image_path}}"  accept="image/*">
+                                    <label for="flag">Image</label>
+                                    <input type="file" class="form-control" id="image" name="image" placeholder="{{$image_path}}" accept="image/*">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
