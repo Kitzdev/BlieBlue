@@ -43,7 +43,7 @@ class UserController extends Controller
     
     public function editUser($user_id) {
         $users = [
-            "users" => collect($this->User->searchItemRow($user_id))
+            "users" => collect($this->User->searchUserRow($user_id))
         ];
 
         return view('user_edit', $users);

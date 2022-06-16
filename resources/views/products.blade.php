@@ -1,8 +1,7 @@
 <?php
 
-$starElement = html_entity_decode(str_repeat('<img alt="star"
-     src="../../public/storage/images/products/—Pngtree—vector%20complex%20star%20icon_4183954.png"
-     width="15px">', 5));
+$starImage = asset('storage/images/products/—Pngtree—vector complex star icon_4183954.png');
+$starElement = html_entity_decode(str_repeat("<img alt=\"star\" src=\"$starImage\" width=\"15px\">", 5));
 
 $bestForYourPetCardParameter = [
     [

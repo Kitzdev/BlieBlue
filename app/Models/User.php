@@ -39,7 +39,7 @@ class User extends Model
     }
 
     // Search row by user_id
-    public function searchuserRow($user_id) {
+    public function searchUserRow($user_id) {
         $user = DB::select('select * from user where user_id = ?', [$user_id]);
         return $user;
     }

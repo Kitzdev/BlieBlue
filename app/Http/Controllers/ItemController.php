@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Models\Item;
+use Illuminate\Support\Facades\Storage;
 
 class ItemController extends Controller
 {
     // Init "Item model" object
     public function __construct() {
        $this->Item = new Item();
-    } 
+    }
 
     // Returns default page (dashboard view)
     public function index() {
@@ -26,11 +26,16 @@ class ItemController extends Controller
             "item_type" => $request->input('item_type'),
             "item_description" => $request->input('description'),
             "flag" => $request->input('flag'),
-            "image_name" => $request->input('image_name'),
-            "image_url" => $request->input('image_url'),
         ];
 
+        if ($request->hasFile('image')) {
+            $fileName = time() . '-' . $request->file('image')->getClientOriginalName();
+            $path = $request->file('image')->storeAs('images', $fileName, 'public_uploads');
+            $item['image_path'] = 'uploads/' . $path;
+        }
+
         $this->Item->addItem($item);
+
         return redirect('/dashboard/items');
     }
 
@@ -43,7 +48,7 @@ class ItemController extends Controller
         return view('dashboard_items', $items);
     }
 
-    
+
     public function editItem($item_id) {
         $items = [
             "items" => collect($this->Item->searchItemRow($item_id))
@@ -63,8 +68,14 @@ class ItemController extends Controller
             "flag" => $request->input('flag'),
         ];
 
+        if ($request->hasFile('image')) {
+            $fileName = time() . '-' . $request->file('image')->getClientOriginalName();
+            $path = $request->file('image')->storeAs('images', $fileName, 'public_uploads');
+            $item['image_path'] = 'uploads/' . $path;
+        }
+
         $this->Item->updateItem($item_id, $item);
-        return redirect('/dashboard/items');
+        return redirect('/dashboard/items')->with('flash_message', 'Edit produk berhasil !');
     }
 
     // Delete item, redirect to default page (dashboard view)

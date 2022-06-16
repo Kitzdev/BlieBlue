@@ -1,8 +1,10 @@
-begin
+begin;
+
+-- Add new column to item.
+ALTER TABLE item add column image_path TEXT;
 
 -- Insert items into table 'item'
-
-INSERT INTO `item` (`item_name`, `price`, `item_type`, `description`, `flag`) 
+INSERT INTO `item` (`item_name`, `price`, `item_type`, `description`, `flag`)
 VALUES
 (1, "Pedigree", 35.00, 1, "Pedigree Chicken, Egg and Milk Flavour Puppy Dry Food", 11),
 (2, "Whiskas", 100.00, 1, "Delight your cat with the delicious meaty taste of WHISKAS. We have a whole range that taste great and contain all of the nutrients, vitamin, etc", 11),
@@ -27,8 +29,6 @@ VALUES
 (21, "Nature Plan", 64.00, 1, "Nature Plan uses Anavarza branded real honey powder specially produced by Sezen Gıda in its products.", 33),
 (22, "Waga", 85.00, 1, "Wagg Bunny is a balanced formulation packed full of ingredients. We have included vitamin E to help support a healthy immune system and calcium & vitamin D for strong teeth and bones.", 33);
 
-
-
 -- Insert users into table 'user'
 
 INSERT INTO `user` (`user_fullname`, `user_name`, `password`, `user_role`) VALUES
@@ -40,6 +40,5 @@ INSERT INTO `user` (`user_fullname`, `user_name`, `password`, `user_role`) VALUE
 ('Budi', 'budi31', 'sibudi31', 'Staff'),
 ('Udin', 'udin42', 'passwordnyaudin42', 'Staff'),
 ('Eman', 'eman21', 'inieman21', 'Staff');
-
 
 commit;
