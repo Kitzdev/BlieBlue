@@ -112,7 +112,7 @@
                   </div>
   
                   <div class="col-lg-1 d-flex justify-content-end">
-                    <a href="#" class="cart-link link-danger">Remove</a>
+                    <a href="/cart/items/delete/{items_id}" class="cart-link link-danger">Remove</a>
                   </div>
               </div>
             </div>
@@ -199,7 +199,7 @@
       <div class="row justify-content-end">
         <div class="col-2">
           <form action="" method="get">
-            <button type="button" class="btn button-primary px-4">Checkout</button>
+            <button type="button" class="btn button-primary px-4" >Checkout</button>
           </form>
         </div>
       </div>

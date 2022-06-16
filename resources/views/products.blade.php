@@ -40,7 +40,10 @@ $bestForYourPetCardTemplate = function ($parameter) use ($starElement) {
                         <div class="star-container">%s</div>
                         <p class="card-price">$ • %s</p>
                         <p class="card-text">%s</p>
+						<form action="/cart/items/add/submit" method="post">
+						  @csrf
                         <a class="btn"  href="cart">ADD TO CART</a>
+						</form>	
                     </div>
                 </div>
             </div>',

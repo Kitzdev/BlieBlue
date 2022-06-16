@@ -92,3 +92,24 @@ Route::post('/dashboard/users/delete/{user_id}', [UserController::class, 'delete
 
 
 // end of Dashboard user
+
+
+
+
+
+
+//Cart CRUD
+Route::get('/cart/items', [cartController::class, 'ShowCart']);
+
+// Submit add cart
+Route::post('/cart/items/add/submit', [cartController::class, 'addCart']);
+
+// Edit cart page
+Route::get('/cart/items/edit/{items_id}', [cartController::class, 'editCart']);
+
+// Update cart
+Route::post('/cart/items/update/{items_id}', [cartController::class, 'updateCart']);
+
+// Delete cart
+Route::post('/cart/items/delete/{items_id}', [cartController::class, 'deleteCart']);
+
