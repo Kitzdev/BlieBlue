@@ -48,6 +48,17 @@ class ItemController extends Controller
         return view('dashboard_items', $items);
     }
 
+    public function showProducts()
+    {
+        $itemModel = new Item();
+        $items = [
+            'bestForYourPet' => $itemModel->getBestForYourPetProducts(),
+            'ourFavourite' => $itemModel->getOurFavouriteProducts(),
+            'petFood' => $itemModel->getPetFoodProducts(),
+        ];
+
+        return view('products', $items);
+    }
 
     public function editItem($item_id) {
         $items = [

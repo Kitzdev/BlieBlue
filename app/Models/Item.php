@@ -10,12 +10,33 @@ class Item extends Model
 {
     use HasFactory;
 
+    const FOOD_PRODUCT_FLAG = 11;
+    const SERVICE_FLAG = 12;
+    const PRODUCT_FLAG = 21;
+    const BEST_FOR_YOUR_PET_PRODUCT_FLAG = 31;
+    const OUR_FAVOURITE_FLAG = 32;
+
     // Show all items in table "item"
     public function getItem()
 	{
 	   $items = DB::select('SELECT * FROM item');
        return $items;
 	}
+
+    public function getBestForYourPetProducts()
+    {
+        return DB::select("SELECT * FROM item where flag = " . self::BEST_FOR_YOUR_PET_PRODUCT_FLAG);
+    }
+
+    public function getOurFavouriteProducts()
+    {
+        return DB::select("SELECT * FROM item where flag = " . self::OUR_FAVOURITE_FLAG);
+    }
+
+    public function getPetFoodProducts()
+    {
+        return DB::select("SELECT * FROM item where flag = " . self::FOOD_PRODUCT_FLAG);
+    }
 
     // Add item into table "item"
     public function addItem($item) {

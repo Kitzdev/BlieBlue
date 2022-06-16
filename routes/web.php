@@ -28,9 +28,7 @@ Route::get('/contact', function () {
     return view('contact_us');
 });
 
-Route::get('/products', function () {
-    return view('products');
-});
+Route::get('/products', [ItemController::class, 'showProducts']);
 
 Route::get('/service', function () {
     return view('services');
