@@ -20,7 +20,7 @@
     </div>
     <div class="d-none d-lg-flex d-xl-flex navbar-brand justify-content-around flex-wrap me-5 navbar-anchor">
         <a class="px-2" href="/cart"><i class="fa fa-shopping-cart font-size-20px"></i></a>
-        <a class="px-2" href="/register"><i class="fa fa-user font-size-20px"></i></a>
+        <a class="px-2" href="/login"><i class="fa fa-user font-size-20px"></i></a>
     </div>
     <div class="d-none d-lg-flex d-xl-flex navbar-brand justify-content-around flex-wrap navbar-social-media">
         <img src="{{asset('storage/images/header/bx_bxl-facebook.png')}}" alt="Facebook Logo" class="px-2">

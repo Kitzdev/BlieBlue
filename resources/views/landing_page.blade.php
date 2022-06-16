@@ -20,7 +20,7 @@
 <main>
     <div class="banner">
          <video style="width:100%;" autoplay>
-            <source src="{{asset('storage/landing-page-images/video-landing-page.mp4')}}"" type="video/mp4">
+            <source src="{{asset('storage/landing-page-images/video-landing-page.mp4')}}" type="video/mp4">
             Your browser does not support the video tag.
             </video>
     </div>

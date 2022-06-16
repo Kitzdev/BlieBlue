@@ -5,7 +5,7 @@ use App\Models\User;
 $roles = User::ROLE;
 ?>
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -125,7 +125,7 @@ $roles = User::ROLE;
 
     <div class="container mx-5">
         <div align="center">
-            <small>Already have an account? <a href="/sign-in" style="color:#000000">Sign in</a></small>
+            <small>Already have an account? <a href="/login" style="color:#000000">Sign in</a></small>
         </div>
     </div>
 

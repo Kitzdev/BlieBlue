@@ -39,6 +39,11 @@ Route::get('/register',function () {
     return view('register');
 });
 
+// Login
+Route::get('/login',function () {
+    return view('login');
+});
+
 //post Register
 Route::post('/register', [RegisterController::class, 'store']);
 

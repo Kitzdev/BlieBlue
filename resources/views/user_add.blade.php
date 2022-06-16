@@ -24,7 +24,7 @@ $roles = User::ROLE;
                 <div class="card">
                     <div class="card-header d-inline-flex">
                         <a class="btn btn-primary me-3" href="/dashboard/users" role="button">Back</a>
-                        <h3>Register Item</h3>
+                        <h3>Add new user</h3>
                     </div>
                     <div class="card-body">
                         <form action="/dashboard/users/add/submit" method="post">
@@ -56,7 +56,7 @@ $roles = User::ROLE;
                             </div>
                             <div class="form-group mb-3">
                                 <label for="user_role">User Role</label>
-                                <input type="text" class="form-control" id="user_role" name="user_role" placeholder="User Role" readonly value="{{$user_role}}">
+                                <input type="text" class="form-control" id="user_role" name="user_role" placeholder="User Role" readonly>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
