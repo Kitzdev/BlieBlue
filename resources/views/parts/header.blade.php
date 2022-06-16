@@ -12,20 +12,21 @@
         <img src="{{asset('storage/images/header/bars.svg')}}" width="25vw">
     </div>
     <div class="d-none d-lg-flex d-xl-flex navbar-brand justify-content-around flex-wrap me-5 navbar-anchor">
-        <a href="/" class="fs-6 px-4">HOME</a>
-        <a href="/about" class="fs-6  px-4">ABOUT US</a>
-        <a href="/products" class="fs-6  px-4">PRODUCTS</a>
-        <a href="/services" class="fs-6 px-4">SERVICES</a>
-        <a href="/contact" class="fs-6 px-4">CONTACT US</a>
+        <a href="/" class="fs-6 px-3">HOME</a>
+        <a href="/about" class="fs-6  px-3">ABOUT US</a>
+        <a href="/products" class="fs-6  px-3">PRODUCTS</a>
+        <a href="/services" class="fs-6 px-3">SERVICES</a>
+        <a href="/contact" class="fs-6 px-3">CONTACT US</a>
     </div>
     <div class="d-none d-lg-flex d-xl-flex navbar-brand justify-content-around flex-wrap me-5 navbar-anchor">
-        <a class="" href="/cart"><i class="fa fa-shopping-cart font-size-30px"></i></a>
+        <a class="px-2" href="/cart"><i class="fa fa-shopping-cart font-size-20px"></i></a>
+        <a class="px-2" href="/register"><i class="fa fa-user font-size-20px"></i></a>
     </div>
     <div class="d-none d-lg-flex d-xl-flex navbar-brand justify-content-around flex-wrap navbar-social-media">
-        <img src="{{asset('storage/images/header/bx_bxl-facebook.png')}}" alt="Facebook Logo" class="px-3">
-        <img src="{{asset('storage/images/header/bx_bxl-instagram.png')}}" alt="Instagram Logo" class="px-3">
-        <img src="{{asset('storage/images/header/bi_twitter.png')}}" alt="Twitter Logo" class="px-3">
-        <img src="{{asset('storage/images/header/ci_mail.png')}}" alt="Email Logo" class="px-3">
+        <img src="{{asset('storage/images/header/bx_bxl-facebook.png')}}" alt="Facebook Logo" class="px-2">
+        <img src="{{asset('storage/images/header/bx_bxl-instagram.png')}}" alt="Instagram Logo" class="px-2">
+        <img src="{{asset('storage/images/header/bi_twitter.png')}}" alt="Twitter Logo" class="px-2">
+        <img src="{{asset('storage/images/header/ci_mail.png')}}" alt="Email Logo" class="px-2">
     </div>
 </div>
 

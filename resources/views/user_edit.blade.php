@@ -57,7 +57,7 @@ $roles = User::ROLE;
                             <div class="dropend">
                                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                    Role
+                                    Choose your role
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                     @foreach($roles as $role)
@@ -69,7 +69,8 @@ $roles = User::ROLE;
                             </div>
                             <div class="form-group mb-3">
                                 <label for="user_role">User Role</label>
-                                <input type="text" class="form-control" id="user_role" name="user_role" placeholder="User Role" readonly="true" value="{{$user_role}}">
+                                <input type="text" class="form-control" id="user_role" name="user_role"
+                                       placeholder="User Role" readonly value="{{$user_role}}">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

@@ -14,6 +14,8 @@ $roles = User::ROLE;
     <title>BlieBlue Dashboard - Add User</title>
 
     <link rel="stylesheet" href="{{asset('library/bootstrap.min.css')}}">
+    <script src="{{asset('library/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('library/bootstrap.bundle.min.js')}}"></script>
 </head>
 <body>
     <div class="my-5 container">
@@ -54,7 +56,7 @@ $roles = User::ROLE;
                             </div>
                             <div class="form-group mb-3">
                                 <label for="user_role">User Role</label>
-                                <input type="text" class="form-control" id="user_role" name="user_role" placeholder="User Role" readonly="true" value="{{$user_role}}">
+                                <input type="text" class="form-control" id="user_role" name="user_role" placeholder="User Role" readonly value="{{$user_role}}">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
