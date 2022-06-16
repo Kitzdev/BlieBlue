@@ -7,7 +7,8 @@ create table item
     price       DECIMAL(10, 2),
     item_type   integer,
     description text,
-    flag        integer
+    flag        integer,
+    image_path  TEXT
 );
 
 create table user
@@ -16,7 +17,7 @@ create table user
     user_fullname text,
     user_name     text,
     password      text, -- hash menggunakan md5 atau sha256
-    user_role     integer
+    user_role     varchar(30)
 );
 
 create table cart
