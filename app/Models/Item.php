@@ -24,10 +24,9 @@ class Item extends Model
         $item_type  = $item['item_type'];
         $description = $item['item_description'];
         $flag       = $item['flag'];
-        $image_name       = $item['image_name'];
-        $image_url       = $item['image_url'];
+        $image_path =  $item['image_path'];
 
-        DB::insert('INSERT INTO item (item_name, price, item_type, description, flag, image_name, image_url) VALUES (?, ?, ?, ?, ?, ?, ?)', [$item_name, $price, $item_type, $description, $flag, $image_name, $image_url]);
+        DB::insert('INSERT INTO item (item_name, price, item_type, description, flag, image_path) VALUES (?, ?, ?, ?, ?, ?)', [$item_name, $price, $item_type, $description, $flag, $image_path]);
     }
 
     // Update item by item_id, require new Item data
