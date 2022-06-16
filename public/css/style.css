@@ -126,7 +126,7 @@ header {
     padding: 7%;
 }
 
-.card-body > a {
+.card-body > span {
     background-color: #676FA3;
     width: 100%;
     font-size: 0.7rem;

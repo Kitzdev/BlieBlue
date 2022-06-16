@@ -45,17 +45,16 @@ $starElement = str_repeat("<img alt=\"star\" src=\"$starImage\" width=\"15px\">"
             Best for your pet
         </h2>
         <div class="best-product-card-container">
-
             @foreach($bestForYourPet as $product)
                 <div class="best-product-card">
                     <div class="best-product-card-information">
-                        <img alt="{{$product->item_name}}" src="{{asset($product->image_path)}}"">
+                        <img alt="{{$product->item_name}}" src="{{asset("storage/$product->image_path")}}">
                         <div class="card-body">
                             <p class="card-title">{{$product->item_name}}</p>
                             <div class="star-container"></div><?php echo $starElement; ?>
                             <p class="card-price">$ • {{$product->price}}</p>
                             <p class="card-text">{{$product->description}}</p>
-                            <a class="btn" href="cart">ADD TO CART</a>
+                            <span class="btn add-to-cart">ADD TO CART</span>
                         </div>
                     </div>
                 </div>
@@ -69,11 +68,12 @@ $starElement = str_repeat("<img alt=\"star\" src=\"$starImage\" width=\"15px\">"
             <div class="our-favourite-card-container">
                 @foreach($ourFavourite as $product)
                     <div class="our-favourite-card">
-                        <img alt="{{$product->item_name}}" height="211px" src="{{asset($product->image_path)}}" width="288px">
+                        <img alt="{{$product->item_name}}" height="211px"
+                             src="{{asset("storage/$product->image_path")}}" width="288px">
                         <div class="card-body">
                             <p class="card-title">{{$product->item_name}}</p>
                             <p class="card-text">{{$product->description}}</p>
-                            <a class="btn" href="cart">ADD TO CART</a>
+                            <span class="btn add-to-cart">ADD TO CART</span>
                         </div>
                     </div>
                 @endforeach
@@ -88,10 +88,15 @@ $starElement = str_repeat("<img alt=\"star\" src=\"$starImage\" width=\"15px\">"
                 @foreach($petFood as $product)
                     <div class="pet-food-card">
                         <div class="image-wrapper" style="background: rgba(176, 36, 133, 0.15);">
-                            <img alt="{{$product->item_name}}" src="{{asset($product->image_path)}}" width="150px">
+                            <img alt="{{$product->item_name}}" src="{{asset('/storage' . $product->image_path)}}"
+                                 width="150px">
                         </div>
-                        <p>{{$product->description}}</p>
-                        <p>$ • {{$product->price}}</p>
+                        <div class="card-body">
+                            <p class="card-title">{{$product->item_name}}</p>
+                            <p>{{$product->description}}</p>
+                            <p>$ • {{$product->price}}</p>
+                            <span class="btn add-to-cart">ADD TO CART</span>
+                        </div>
                     </div>
                 @endforeach;
             </div>
@@ -103,3 +108,12 @@ $starElement = str_repeat("<img alt=\"star\" src=\"$starImage\" width=\"15px\">"
     {{view('parts.footer')}}
 </footer>
 </body>
+
+<script>
+    $(function () {
+        $('span').on('click', function () {
+            const productName = $(this).siblings('p.card-title').text();
+            alert('Berhasil menambahkan ' + productName + ' ke keranjang!');
+        })
+    });
+</script>
