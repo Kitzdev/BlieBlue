@@ -19,7 +19,10 @@
 </header>
 <main>
     <div class="banner">
-        <img src="{{asset('storage/landing-page-images/banner-1.jpg')}}" />
+         <video style="width:100%;" autoplay>
+            <source src="{{asset('storage/landing-page-images/video-landing-page.mp4')}}"" type="video/mp4">
+            Your browser does not support the video tag.
+            </video> 
     </div>
 
     <div class="m-0 py-5 container-fluid" id="container1">
