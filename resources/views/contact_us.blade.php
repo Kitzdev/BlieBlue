@@ -26,7 +26,7 @@
                 <h1 class="contact-us-heading text-center">CONTACT- US</h1>
                 <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>'; color: #F4F7F8;">
                     <ol class="breadcrumb justify-content-center mb-3 mt-3">
-                        <li class="home-breadcrumb breadcrumb-item"><a href="landing_page.blade.php">Home</a></li>
+                        <li class="home-breadcrumb breadcrumb-item"><a href="/">Home</a></li>
                         <li aria-current="page" class="breadcrumb-item active"><strong>Contact Us</strong></li>
                     </ol>
                 </nav>

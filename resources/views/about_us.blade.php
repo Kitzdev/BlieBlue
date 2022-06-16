@@ -25,7 +25,7 @@
 
             <nav aria-label="col breadcrumb">
               <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item"><a href="/about">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">About Us</li>
               </ol>
             </nav>
@@ -123,7 +123,7 @@
           <div class="row service-item my-5 mx-0 justify-content-end">
             <div class="col-md-4 align-self-center desc-start">
               <h3>Pet Training</h3>
-              <p>We train your pet with various approaches with our proffesional pet trainer</p>
+              <p>We train your pet with various approaches with our professional pet trainer</p>
             </div>
             <div class="col-md-6 service-img text-center swappped-img">
               <img src="{{asset('storage/about-us-images/dog-jumping.png')}}" alt="Dog Jumping" />

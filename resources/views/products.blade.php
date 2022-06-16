@@ -174,7 +174,7 @@ $sectionRenderer = function (callable $template, array $parameter, $title, $sect
         <div class="breadcrumb-container">
             <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="landing_page.blade.php">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li aria-current="page" class="breadcrumb-item active">Products</li>
                 </ol>
             </nav>

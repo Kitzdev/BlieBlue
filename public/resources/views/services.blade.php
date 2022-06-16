@@ -37,7 +37,7 @@
     <h1 class="accordion-body  style2"> S E R V I C E S </h1>
     <nav aria-label="breadcrumb " style="--bs-breadcrumb-divider: '>';">
         <ol class="breadcrumb justify-content-center  ">
-            <li class="breadcrumb-item "><a class="style1" href="landing_page.blade.php">Home</a></li>
+            <li class="breadcrumb-item "><a class="style1" href="/">Home</a></li>
             <li aria-current="page" class="breadcrumb-item active text-white">Services</li>
         </ol>
     </nav>
