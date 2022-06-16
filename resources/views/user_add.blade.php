@@ -1,3 +1,10 @@
+<?php
+
+use App\Models\User;
+
+$roles = User::ROLE;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +39,22 @@
                                 <label for="password">Password</label>
                                 <input type="text" class="form-control" id="password" name="password" placeholder="Password">
                             </div>
+                            <div class="dropend">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    Role
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    @foreach($roles as $role)
+                                        <li>
+                                            <button class="dropdown-item" type="button">{{$role}}</button>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
                             <div class="form-group mb-3">
-                                <label for="user_role">User role</label>
-                                <input type="text" class="form-control" id="user_role" name="user_role" placeholder="User role">
+                                <label for="user_role">User Role</label>
+                                <input type="text" class="form-control" id="user_role" name="user_role" placeholder="User Role" readonly="true" value="{{$user_role}}">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
@@ -45,3 +65,11 @@
     </div>
 </body>
 </html>
+
+<script>
+    $(function() {
+        $('.dropdown-item').on('click', function () {
+            $('#user_role').val($(this).text());
+        });
+    });
+</script>

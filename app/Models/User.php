@@ -10,6 +10,8 @@ class User extends Model
 {
     use HasFactory;
 
+    const ROLE = ['Member', 'Staff', 'Admin'];
+
     // Show all users in table "user"
     public function getUser()
 	{
@@ -29,7 +31,7 @@ class User extends Model
 
     // Update user by user_id, require new user data
     public function updateUser($user_id, $user) {
-        
+
         $user_fullname  = $user['user_fullname'];
         $user_name      = $user['user_name'];
         $password       = $user['password'];
