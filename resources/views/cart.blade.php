@@ -62,7 +62,7 @@
       <!-- title -->
       <div class="justify-content-center row my-3">
         <div class="justify-content-start col-md-12 d-inline-flex align-items-center">
-          <a class="cart-link button-secondary rounded-circle btn me-3" href="/" role="button"><</a>
+          <a class="cart-link button-secondary rounded-circle btn me-3" href="products" role="button"><</a>
           <h1>Cart Items</h1>
         </div>
       </div>
