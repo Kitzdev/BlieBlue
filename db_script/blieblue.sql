@@ -1,5 +1,11 @@
 begin;
 
+-- Create database;
+CREATE DATABASE blieblue;
+
+-- Conncet to database;
+USE blieblue;
+
 -- Create tables
 create table item
 (
