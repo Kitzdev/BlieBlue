@@ -35,4 +35,9 @@ Route::get('/service', function () {
 });
 
 //Register 
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/register',function () {
+    return view('register');
+});
+
+//post Register
+Route::post('/register', [RegisterController::class, 'store']);
