@@ -46,17 +46,17 @@ $roles = User::ROLE;
     <form action="/register" method="post">
         @csrf
         <!--Fullname-->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center  px=3">
             <div class="col-lg-3">
                 <label for="user_fullname" class="form-label">Fullname</label>
-                <input type="text" class="form-control" name="user_fullname" @error ('username') is-invalid
-                       @enderror placeholder="*Enter Your Username Here" id="user_fullname"/>
+                <input type="text" class="form-control" name="user_fullname" @error ('fullname') is-invalid
+                       @enderror placeholder="*Enter Your Full Name Here" id="user_fullname"/>
             </div>
         </div>
 
 
         <!--Username-->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center py-3" px="3">
             <div class="col-lg-3">
                 <label for="user_name" class="form-label">Username</label>
                 <input type="text" class="form-control" name="user_name" @error ('username') is-invalid
