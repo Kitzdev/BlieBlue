@@ -24,8 +24,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h2>Edit Item</h2>
+                        <div class="card-header d-inline-flex">
+                            <a class="btn btn-primary me-3" href="/dashboard/items" role="button">Back</a>
+                            <h3>Edit Item</h3>
                         </div>
                         <div class="card-body">
                             <h5 class="mb-3">Item ID :{{$item_id}} </h5>

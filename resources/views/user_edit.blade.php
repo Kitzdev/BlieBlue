@@ -22,8 +22,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h2>Edit User</h2>
+                        <div class="card-header d-inline-flex">
+                            <a class="btn btn-primary me-3" href="/dashboard/users" role="button">Back</a>
+                            <h3>Edit User</h3>
                         </div>
                         <div class="card-body">
                             <h5 class="mb-3">User ID :{{$user_id}} </h5>
@@ -54,8 +55,8 @@
         </div>
     @else
         <div class="text-center my-5">
-            <h1 class="h3 m-5 text-gray-800">Item not found</h1>
-            <p class="lead text-gray-800 mb-1">Go back to item dashboard</p>
+            <h1 class="h3 m-5 text-gray-800">User not found</h1>
+            <p class="lead text-gray-800 mb-1">Go back to user dashboard</p>
             <a class="btn btn-primary" href="/dashboard/users" role="button">User Dashboard</a>
         </div>
     @endif
