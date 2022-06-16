@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\ItemController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,9 +29,17 @@ Route::get('/products', function () {
     return view('products');
 });
 
-Route::get('/services', function () {
+Route::get('/service', function () {
     return view('services');
 });
+
+//Register
+Route::get('/register',function () {
+    return view('register');
+});
+
+//post Register
+Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/cart', function () {
     return view('cart');
