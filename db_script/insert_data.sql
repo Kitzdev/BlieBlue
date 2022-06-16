@@ -1,8 +1,5 @@
 begin;
 
--- Add new column to item.
-ALTER TABLE item add column image_path TEXT;
-
 -- Insert items into table 'item'
 
 INSERT INTO `item` (`item_id`, `item_name`, `price`, `item_type`, `description`, `flag`, `image_path`) VALUES
@@ -37,8 +34,8 @@ INSERT INTO `user` (`user_fullname`, `user_name`, `password`, `user_role`) VALUE
 ("Kitbert", "kitbert", "32200038", "Admin"),
 ("Eric Wiyanto", "ericwiyanto", "32200039", "Admin"),
 ("Janice Claresta Lingga", "janiceclarestalingga", "32200041", "Admin"),
-("Budi", "budi31", "sibudi31", "Staff"),
-("Udin", "udin42", "passwordnyaudin42", "Staff"),
-("Eman", "eman21", "inieman21", "Staff");
+("Budi", "budi31", "sibudi31", "User"),
+("Udin", "udin42", "passwordnyaudin42", "User"),
+("Eman", "eman21", "inieman21", "User");
 
 commit;
